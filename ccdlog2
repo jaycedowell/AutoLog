@@ -1,0 +1,597 @@
+#!/usr/bin/wish
+
+proc start_log {homedir_entry observer_entry instr_menu} {
+
+	global pagecount oldfile datestring
+	global path observer instr 
+	global startbutton pausebutton
+
+	set path [$homedir_entry get]
+	set observer [$observer_entry get]
+	set instr [$instr_menu cget -text]
+
+        if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
+          set oldfile $result
+        }
+
+#        set oldfile whatever
+
+        set datestring [eval exec {date -u +%B\x0x20%d,\x0x20%Y}]
+
+	newpage 
+
+#	start exposure logging
+
+	nextlog 
+
+	$startbutton configure -state disabled
+	$pausebutton configure -state normal -bg green -activebackground green
+	raise .logcontrol
+
+}
+
+
+#  Autolog procs
+
+proc canvas_text_select {win x y} {
+
+	global font1
+
+	canvas_text_done $win
+
+	if {[$win type current] == "text"} {
+	  $win addtag "editText" withtag current
+	} else {
+	  $win create text $x $y -anchor nw -justify left -tags "editText" -font $font1
+	}
+
+	focus $win
+	$win focus "editText"
+	$win icursor "editText" @$x,$y
+
+	bind text <KeyPress> {
+	  canvas_text_edit_add %W %A
+	}
+	bind text <KeyPress-Return> {
+	  canvas_text_edit_add %W "\n"
+	}
+	bind text <KeyPress-BackSpace> {
+	  canvas_text_edit_backsp %W 
+	}
+	bind text <KeyPress-Delete> {
+	  canvas_text_edit_backsp %W
+	}
+
+}
+
+proc canvas_text_edit_add {win str} {
+
+	$win insert "editText" insert $str 
+}
+
+proc canvas_text_edit_backsp {win} {
+
+	set pos [expr [$win index "editText" insert] - 1]
+	
+	if {$pos >= 0} {
+	  $win dchars "editText" $pos
+	}
+}
+
+proc canvas_text_done {win} {
+
+	set mesg [$win itemcget "editText" -text]
+	
+	if {[string length [string trim $mesg]] == 0} {
+	  $win delete "editText"
+	}
+	
+	$win dtag "editText"
+	$win focus ""
+}
+
+proc parse_header fits_file  {
+
+	global binpath header instr_menu instr c
+
+	  set perlscript [join [list $instr "_parse.pl"] ""]
+	  regsub " " $perlscript "" perlscript
+	  set hid [eval exec "$binpath/$perlscript $fits_file > $binpath/tmpheader"]
+	  set fid [open "$binpath/tmpheader" "r"]
+
+	  set i 0
+	  while {[gets $fid line] >= 0} {
+	    incr i
+	    set header($i) $line
+	  }
+	  close $fid
+          drivelog $c
+}
+
+proc nextlog {} {
+
+	global oldfile path instr afterid binpath homedir_entry 
+
+	set binpath /home/jdowell/Utilities
+	set path [$homedir_entry get]
+
+	set newfile $oldfile
+	update
+	if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
+	  set newfile $result
+	} 
+	if {$newfile != $oldfile} {
+	  if {$newfile != "$path/test.fits"} {
+#	  puts "Starting new log entry"
+	    if {$instr == "MOSAIC"} {
+              set afterid [after 6000 parse_header $newfile]
+            } else {
+	      set afterid [after 3000 parse_header $newfile]
+            }
+	    set oldfile $newfile
+	  }
+	} 
+	set afterid [after 1000 nextlog]
+}
+	  
+proc drivelog w {
+
+	global entrycount psfile autoprint pagecount psdate c homedir_entry
+
+#	set psfile "[$homedir_entry get]/autolog_page$pagecount.ps"
+#	set psfile "/md1/autolog/autolog_page$pagecount.ps"
+
+	if {$entrycount < 11} {
+	  incr entrycount
+	  drawlog $w
+          set psfile "[$homedir_entry get]/$psdate$pagecount.ps"
+	  $w postscript -file $psfile -x -5 -y -15 -rotate yes -pagewidth 10.8i
+	} else {
+          set psfile "[$homedir_entry get]/$psdate$pagecount.ps"
+	  $c itemconfigure highlight -fill black
+	  $c itemconfigure currentrun -fill black
+	  $c postscript -file $psfile -x -5 -y -15 -rotate yes -pagewidth 10.8i
+          if ($autoprint==1) {eval exec "lpr -h $psfile"}
+	  $c itemconfigure highlight -fill firebrick
+	  $c itemconfigure currentrun -fill blue
+	  newpage
+	  incr entrycount
+          drawlog $c
+	}
+	update idletasks
+} 
+
+proc print_current_page {c psfile} {
+
+	  $c itemconfigure highlight -fill black
+	  $c itemconfigure currentrun -fill black
+	  $c postscript -file $psfile -x -5 -y -15 -rotate yes -pagewidth 10.8i 
+          eval exec "lpr -h $psfile"
+	  $c itemconfigure highlight -fill firebrick
+	  $c itemconfigure currentrun -fill blue
+}
+
+proc newpage {} {
+
+	global c
+	global entrycount yoff pagecount datestring psdate
+	global path instr 
+	global pausebutton observer
+	global homedir_entry heading
+
+
+
+	incr pagecount
+#	set psfile "[$homedir_entry get]/autolog_page$pagecount.ps"
+#	set psfile "/md1/autolog/autolog_page$pagecount.ps"
+        set psdate [eval exec {/bin/date -u +autolog_%C%y-%m-%d-%H%M_page}]
+        set psfile "[$homedir_entry get]/$psdate$pagecount.ps"
+
+
+	$pausebutton configure -command "pause_log .t$pagecount"
+
+	set bigfont -adobe-times-bold-r-normal--24-240-75-75-p-132-iso8859-1
+	set medfont -adobe-times-bold-r-normal--18-180-75-75-p-99-iso8859-1
+	set smallfont -adobe-times-bold-r-normal--14-140-75-75-p-77-iso8859-1
+
+        set w [toplevel .t$pagecount]
+        wm title $w "Autolog Page $pagecount"
+	wm geometry $w 800x600+0+0
+        set m  [menu $w.menubar -tearoff 0 -relief flat]
+        set c [canvas $w.canvas -height 690 -width 960 -bg lightgray]
+        pack $c
+        $m add cascade -label File -menu [menu $m.file]
+        $m.file add command -label "Print Page" -command "print_current_page $c $psfile"
+        $m.file add command -label "New Page" -command "newpage"
+        $m.file add command -label "Close Page" -command "wm withdraw $w"
+        $m.file add command -label "Quit Autolog" -command "exit"
+        $m add cascade -label Help -menu [menu $m.help]
+        $m.help add command -label Index -command {puts Sorry}
+        $w configure -menu $m
+	wm geometry $w ""
+
+
+
+	bind text <ButtonPress-1> {
+	  canvas_text_select %W %x %y
+	}
+	bindtags $c {text}
+
+#       Create header for each new page
+
+
+	$c create rectangle 11 5 950 110 -width 2
+	if {$instr == "T2KB"} {
+	$c create text 20 20  -text "KPNO 2.1m Telescope" -font $bigfont -anchor w
+	 } else {
+	$c create text 20 20  -text "WIYN 0.9m Telescope" -font $bigfont -anchor w
+	}
+	$c create text 20 45 -text "UT Date:  $datestring" -font $medfont -anchor w
+	$c create text 650 45 -text "Observer:  $observer" -font $medfont -anchor w -tag observertext
+
+	$c create text 425 45 -text "Instrument:" -font $medfont -anchor e
+	$c create text 425 45 -text "  $instr" -font $medfont -anchor w
+
+
+#	$c create text 900 20  -text "AutoLog" -font $bigfont -anchor e
+	$c create text 940 20 -text "Page $pagecount" -font $medfont -anchor e
+
+#	create headings; different headings for each instrument, but same layout
+
+	set yoff 10
+	set entrycount 0
+
+	if {$instr == "MOSAIC"} {
+ 	  set headings [list dum "Sequence \n Number" Title RA Dec Epoch UT LST \
+                      "UT Date" Airmass \
+                      "Exposure\n   Time" \
+                       Filter N_amps Focus T_env T_dew T_ccd]
+	  for {set i 1} {$i<=16} {incr i} {
+	    set heading($i) [lindex $headings $i]
+	  }
+	}
+
+	if {$instr == "T2KB"} {
+ 	  set headings [list dum "Sequence \n Number" Title RA Dec Epoch UT \
+                       LST "UT Date" Airmass \
+                      "Exposure\n   Time" \
+                       Filter RotAngle Focus Binning T_dew T_ccd ]
+	  for {set i 1} {$i<=16} {incr i} {
+	    set heading($i) [lindex $headings $i]
+	  }
+
+	}
+
+	if {$instr == "S2KB"} {
+	  set headings [list dum "Sequence \n Number" Title RA Dec Epoch UT \
+	               LST "UT Date" Airmass \
+                       "Exposure\n   Time" \
+		       Filter1 Filter2 Focus Binning T_dew T_ccd ]
+          for {set i 1} {$i<=16} {incr i} {
+            set heading($i) [lindex $headings $i]
+	  }
+	}											
+	drawheadings $c
+
+#	start exposure logging
+	
+#	nextlog $c
+}
+	
+proc drawheadings w {
+
+	global heading comment 
+	global yoff font1 font2
+	global path observer instr 
+
+	set font1 -linotype-helvetica-bold-r-normal-sans-10-120-72-72-p-67-iso8859-1
+#	set font1 -linotype-helvetica-bold-r-normal-sans-14-140-72-72-p-79-iso8859-1
+#	set font1 -linotype-helvetica-medium-r-narrow-sans-14-140-72-72-p-62-iso8859-1
+#	set font2 -adobe-times-bold-r-normal--24-240-75-75-p-132-iso8859-1
+	set font2 -adobe-times-bold-r-normal--20-140-100-100-p-100-iso8859-1
+
+	incr yoff 49
+
+	set y1 [expr $yoff+1]
+	set y50 [expr $yoff+50]
+	set y25 [expr $yoff+25]
+	set y13 [expr $yoff+13]
+	set y38 [expr $yoff+38]
+	set y8 [expr $yoff+8]
+
+# circumscribe with thick rectangle
+	$w create rectangle 11 $y1 950 $y50 
+
+# sequence number 				REVISED FOR KPNO 3/14/02
+
+	$w create rectangle 11 $y1 70 $y50
+
+# target name
+	$w create rectangle 70 $y1 290 $y25     
+# RA
+	$w create rectangle 70 $y25 155 $y50    
+# Dec
+	$w create rectangle 155 $y25 240 $y50   
+# epoch
+	$w create rectangle 240 $y25 290 $y50  
+# and the rest
+	$w create rectangle 290 $y1 360 $y25 
+	$w create rectangle 290 $y25 360 $y50 
+	$w create rectangle 360 $y1 410 $y25 
+	$w create rectangle 360 $y25 410 $y50 
+	$w create rectangle 410 $y1 470 $y50 
+	$w create rectangle 470 $y1 550 $y25 
+	$w create rectangle 470 $y25 550 $y50 
+	$w create rectangle 550 $y1 600 $y25 
+	$w create rectangle 600 $y1 650 $y25 
+	$w create rectangle 600 $y25 650 $y50 
+#	$w create rectangle 650 $y25 700 $y50 
+#	$w create rectangle 650 $y25 700 $y50 
+	$w create rectangle 650 $y1 950 $y50 
+
+#  write text into the boxes 
+
+	$w create text 45 $y25 -text $heading(1) -font $font1
+	$w create text 180 $y13 -text $heading(2) -font $font1
+	$w create text 113 $y38 -text $heading(3) -font $font1
+	$w create text 198 $y38 -text $heading(4) -font $font1
+	$w create text 266 $y38 -text $heading(5) -font $font1
+	$w create text 327 $y13 -text $heading(6) -font $font1
+	$w create text 327 $y38 -text $heading(7) -font $font1
+	$w create text 386 $y13 -text $heading(8) -font $font1 
+	$w create text 386 $y38 -text $heading(9) -font $font1 
+	$w create text 440 $y25 -text $heading(10) -font $font1
+	$w create text 510 $y13 -text $heading(11) -font $font1 
+	$w create text 510 $y38 -text $heading(12) -font $font1 
+	$w create text 575 $y13 -text $heading(13) -font $font1
+	$w create text 575 $y38 -text $heading(14) -font $font1
+	$w create text 625 $y13 -text $heading(15) -font $font1
+	$w create text 625 $y38 -text $heading(16) -font $font1
+#	$w create text 675 $y13 -text $heading(17) -font $font1
+#	$w create text 675 $y38 -text $heading(18) -font $font1
+        $w create text 800 $y25 -text Comments -font $font1
+
+#	put space between headings and first log
+
+	incr yoff 10
+
+#  end of proc drawheadings
+	}
+
+proc drawlog w {
+
+	global header comment 
+	global yoff font1 font2
+	global path observer instr 
+
+#	set font1 -linotype-helvetica-bold-r-normal-sans-12-120-72-72-p-67-iso8859-1
+	set font1 -linotype-helvetica-bold-r-normal-sans-14-140-72-72-p-79-iso8859-1
+#	set font1 -linotype-helvetica-medium-r-narrow-sans-14-140-72-72-p-62-iso8859-1
+#	set font2 -adobe-times-bold-r-normal--24-240-75-75-p-132-iso8859-1
+	set font2 -adobe-times-bold-r-normal--20-140-100-100-p-100-iso8859-1
+
+	incr yoff 49
+
+	set y1 [expr $yoff+1]
+	set y50 [expr $yoff+50]
+	set y25 [expr $yoff+25]
+	set y13 [expr $yoff+13]
+	set y38 [expr $yoff+38]
+	set y8 [expr $yoff+8]
+
+# circumscribe with thick rectangle
+	$w create rectangle 11 $y1 950 $y50 -width 2
+
+# sequence number 				REVISED FOR KPNO 3/14/02
+
+	$w create rectangle 11 $y1 70 $y50
+
+# target name
+	$w create rectangle 70 $y1 290 $y25     
+# RA
+	$w create rectangle 70 $y25 155 $y50    
+# Dec
+	$w create rectangle 155 $y25 240 $y50   
+# epoch
+	$w create rectangle 240 $y25 290 $y50  
+# and the rest
+	$w create rectangle 290 $y1 360 $y25 
+	$w create rectangle 290 $y25 360 $y50 
+	$w create rectangle 360 $y1 410 $y25 
+	$w create rectangle 360 $y25 410 $y50 
+	$w create rectangle 410 $y1 470 $y50 
+	$w create rectangle 470 $y1 550 $y25 
+	$w create rectangle 470 $y25 550 $y50 
+	$w create rectangle 550 $y1 600 $y25 
+	$w create rectangle 550 $y25 600 $y50 
+	$w create rectangle 600 $y1 650 $y25 
+	$w create rectangle 600 $y25 650 $y50 
+#	$w create rectangle 650 $y1 700 $y25 
+#	$w create rectangle 650 $y25 700 $y50 
+	$w create rectangle 650 $y1 950 $y50 
+
+#  write text into the boxes 
+
+#						REVISED FOR KPNO 3/14/02
+
+	$w create text 45 $y25 -text $header(1) -font $font2 -tag currentrun
+	$w create text 180 $y13 -text $header(2) -font $font2 -tag highlight
+	$w create text 116 $y38 -text $header(3) -font $font1
+	$w create text 198 $y38 -text $header(4) -font $font1
+	$w create text 269 $y38 -text $header(5) -font $font1
+	$w create text 328 $y13 -text $header(6) -font $font1
+	$w create text 328 $y38 -text $header(7) -font $font1
+	$w create text 387 $y13 -text $header(8) -font $font1 
+	$w create text 385 $y38 -text $header(9) -font $font1 
+	$w create text 440 $y25 -text $header(10) -font $font2  -tag highlight
+	$w create text 513 $y13 -text $header(11) -font $font1 
+	$w create text 513 $y38 -text $header(12) -font $font1 
+	$w create text 578 $y13 -text $header(13) -font $font1
+	$w create text 576 $y38 -text $header(14) -font $font1
+	$w create text 625 $y13 -text $header(15) -font $font1
+	$w create text 625 $y38 -text $header(16) -font $font1
+#	$w create text 675 $y13 -text $header(17) -font $font1
+#	$w create text 679 $y38 -text $header(18) -font $font1
+
+	$w itemconfigure highlight -fill firebrick
+	$w itemconfigure currentrun -fill blue
+	$w itemconfigure currentloop -fill blue
+
+#  dump to postscript
+
+#  end of proc drawlog
+	}
+
+proc pause_log {win} {
+
+	global afterid pausebutton resumebutton pagecount
+
+	if {$afterid != ""} {
+
+	  after cancel $afterid
+	  pack forget $pausebutton
+	  $resumebutton configure -command "resume_log $win"
+	  pack $resumebutton -side left -padx 10 -pady 10
+
+	}
+	set afterid ""
+
+}
+
+proc resume_log {win} {
+
+	global pausebutton resumebutton pagecount oldfile path
+	global homedir_entry
+	
+	set path [$homedir_entry get]
+
+	pack forget $resumebutton
+	$pausebutton configure -command "pause_log $win"
+	pack $pausebutton -side left -padx 10 -pady 10
+
+        if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result]
+== 0} {
+          set oldfile $result
+        }
+
+	nextlog 
+}
+
+#  Beginning of main program
+
+	wm withdraw .
+	set t [toplevel .logcontrol]
+	wm geometry $t 375x300+770+300
+	wm title $t {WIYN 0.9m Autolog Control Panel}
+	set m  [menu $t.menubar -tearoff 0 -relief groove]
+	$m add cascade -label File -menu [menu $m.file]
+	$m.file add command -label Quit -command exit
+	$m add cascade -label Help -menu [menu $m.help]
+	$m.help add command -label "email marzke@ociw.edu" -command {}
+	$t configure -menu $m
+	wm geometry $t ""
+
+	set dum "whatever"
+
+        set pagecount 0
+	set afterid ""
+	set oldfile whatever
+
+#  set up the first frame
+
+	set font1 -adobe-helvetica-bold-r-normal--14-100-100-100-p-82-iso8859-1
+	set font2 -adobe-helvetica-medium-r-normal--18-180-75-75-p-98-iso8859-1
+	set font2 -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1
+	set font2 -adobe-helvetica-medium-r-normal--14-100-100-100-p-76-iso8859-1
+
+	set f [frame $t.f -relief groove -bd 2 ]
+
+	set f1 [frame $f.1]
+	set f2 [frame $f.2]
+	set f3 [frame $f.3]
+
+	set homedir [lindex $argv 0]
+	if {$homedir == ""} {set homedir "/md1/36inch"}
+
+	set homedir_label [label $f1.hdl -text "Image directory:" -pady 10] 
+                                      
+	set homedir_entry [entry $f1.hde -width 30 -font $font2]
+	$homedir_entry insert 0 $homedir
+
+
+#  Instrument menu
+
+	set instr_label [label $f1.instrl -text "       Instrument:" ]
+	set instr_menu [menubutton $f1.instrm -direction flush -indicatoron \
+                          true -relief raised -state normal -width 30]
+	set instr_list [menu $instr_menu.intr_list -tearoff 0 -type normal]
+
+	set ilist [list "T2KB" "S2KB" "MOSAIC"]
+
+	foreach instrument $ilist {
+	  $instr_list add command -label $instrument \
+             -command "$instr_menu configure -text {$instrument}"
+	}
+
+	set c_instr [string toupper [lindex $argv 1]]
+	if {$c_instr == ""} {set homedir "MOSAIC"}
+	$instr_menu configure -text $c_instr
+	$instr_menu configure -menu $instr_list
+	
+	set observer_label [label $f1.obsl -text "Observer Names:" -pady 10] 
+                                      
+	set observer_entry [entry $f1.obse -width 30 -font $font2]
+        $observer_entry insert 0 ""
+
+	set startbutton [button $f3.start -command "start_log $homedir_entry $observer_entry \
+              $instr_menu "\
+                   -text "Start\nLogging" -font $font1 -background "SlateGray" \
+                         -fg khaki -bd 4 -pady 10]
+
+	set pausebutton [button $f3.pause  -state disabled \
+                   -text "Pause\nLogging" -font $font1 -background "SlateGray" \
+                         -fg black -bd 4 -pady 10 \
+                             -command "pause_log .t$pagecount "]
+        set resumebutton  [button $f3.resume \
+               -text "Resume\nLogging" -font $font1 \
+	        -background red -activebackground red -fg black -bd 4 -pady 10 ]
+
+
+	grid $homedir_label $homedir_entry 
+
+	grid $instr_label -row 1 -column 0
+	grid $instr_menu -row 1 -column 1
+
+	grid $observer_label $observer_entry
+
+	pack $startbutton $pausebutton -side left -padx 10 -pady 10
+
+	pack $f1 -fill both -expand yes -padx 10 
+	pack $f3 -fill both -expand yes -padx 10 -pady 5 -side right
+
+	pack $f
+
+
+	
+#	set up the second frame
+
+
+	set g [frame $t.g -relief groove -bd 2]
+	set h [frame $t.h -relief groove -bd 2]
+	set sig [frame $t.sig -relief groove -bd 2 ]
+
+
+	pack [frame $g.f1] -fill both -expand yes -pady 10
+	pack [checkbutton $g.f1.recallb -variable autoprint ] -side left -anchor w -padx 15
+	$g.f1.recallb select
+	pack [label $g.f1.recalll -text "Print log sheets automatically"] -side left -anchor w
+	
+
+	pack $g -fill both -expand yes
+	pack [label $sig.lab -text "10/10/99 R. Marzke          Revised 2/23/03" -font \
+              -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1 \
+                -anchor w] -fill both -expand yes
+	pack $sig -fill both -expand yes
+
+
+
