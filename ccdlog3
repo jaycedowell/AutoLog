@@ -1,23 +1,31 @@
 #!/usr/bin/wish
 
-proc start_log {homedir_entry instr_menu} {
+proc start_log {homedir_entry observer_entry instr_menu} {
 
 	global pagecount oldfile datestring
 	global path observer instr 
 	global startbutton pausebutton
+	global lastmtime
 
 	set path [$homedir_entry get]
-	set observer "              "
+	set observer [$observer_entry get]
 	set instr [$instr_menu cget -text]
 
-        if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result]
-== 0} {
+        if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
           set oldfile $result
         }
+	
+	# Holder for the last time the directory specified in $path was modified
+	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
+			regsub -all ' $result "" lastmtime
+	} else {
+		set lastmtime "0"
+	}
+#	puts $lastmtime
 
-#        set oldfile whatever
+#       set oldfile whatever
 
-        set datestring [eval exec {date -u +%B\x0x20%d,\x0x20%Y}]
+        set datestring [clock format [clock seconds] -format "%B %d, %Y" -gmt 1]
 
 	newpage 
 
@@ -94,6 +102,9 @@ proc canvas_text_done {win} {
 proc parse_header fits_file  {
 
 	global binpath header instr_menu instr c
+	global debug
+
+	set parsestart [clock clicks -milliseconds]
 
 	  set perlscript [join [list $instr "_parse.pl"] ""]
 	  regsub " " $perlscript "" perlscript
@@ -106,33 +117,67 @@ proc parse_header fits_file  {
 	    set header($i) $line
 	  }
 	  close $fid
-          drivelog $c
+
+	set parsestop [clock clicks -milliseconds]
+	set parsetime [expr $parsestop - $parsestart]
+	if { $debug == 1 } {
+		puts [concat "DEBUG:" [join [list $instr "_parse.pl"] ""] "command run time: " $parsetime " ms"]
+	}
+
+	drivelog $c
 }
 
 proc nextlog {} {
 
-	global oldfile path instr afterid binpath homedir_entry 
+	global oldfile path instr afterid binpath homedir_entry
+	global debug lastmtime
 
-	set binpath /home/jdowell/Utilities
+# Uncomment the following line to use this script on viridis
+#	set binpath /home/jdowell/Utilities
+# Comment the following line to use this script on viridis
+	set binpath /md1/autolog
 	set path [$homedir_entry get]
 
 	set newfile $oldfile
 	update
-	if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
-	  set newfile $result
-	} 
-	if {$newfile != $oldfile} {
-	  if {$newfile != "$path/test.fits"} {
-#	  puts "Starting new log entry"
-	    if {$instr == "MOSAIC"} {
-              set afterid [after 170000 parse_header $newfile]
-            } else {
-	      set afterid [after 10000 parse_header $newfile]
-            }
-	    set oldfile $newfile
-	  }
-	} 
-	set afterid [after 3000 nextlog]
+	
+	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
+		regsub -all ' $result "" mtime
+	} else {
+		set mtime $lastmtime
+	}
+
+	if {$mtime != $lastmtime} {
+		set lastmtime $mtime
+		if { $debug == 1 } {
+			puts [concat "DEBUG: latest modification time: " [clock format [expr $mtime] -format "%T %D"]]
+		}
+		set lsstart [clock clicks -milliseconds]
+		if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
+			set newfile $result
+			set lsstop [clock clicks -milliseconds]
+			set lstime [expr $lsstop - $lsstart]
+			if { $debug == 1 } {
+				puts [concat "DEBUG: ls -t command run time: " $lstime " ms"]
+			}
+		} 
+		if {$newfile != $oldfile} {
+			if {$newfile != "$path/test.fits"} {
+				set parsestart [clock clicks -milliseconds]
+				if {$instr == "MOSAIC"} {
+					set afterid [after 6000 parse_header $newfile]
+				} else {
+					set afterid [after 3000 parse_header $newfile]
+				}
+				set oldfile $newfile
+			} else {
+				if { $debug == 1 } {
+					puts "DEBUG: test.fits file found, skipping"
+				}
+			}
+		}
+	}
+	set afterid [after 2000 nextlog]
 }
 	  
 proc drivelog w {
@@ -463,6 +508,7 @@ proc resume_log {win} {
 
 	global pausebutton resumebutton pagecount oldfile path
 	global homedir_entry
+	global lastmtime
 	
 	set path [$homedir_entry get]
 
@@ -470,10 +516,16 @@ proc resume_log {win} {
 	$pausebutton configure -command "pause_log $win"
 	pack $pausebutton -side left -padx 10 -pady 10
 
-        if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result]
-== 0} {
+        if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
           set oldfile $result
         }
+
+	# Holder for the last time the directory specified in $path was modified
+	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
+			set lastmtime $result
+	} else {
+		set lastmtime '0'
+	}
 
 	nextlog 
 }
@@ -512,7 +564,7 @@ proc resume_log {win} {
 	set f3 [frame $f.3]
 
 	set homedir [lindex $argv 0]
-	if {$homedir == ""} {set homedir "/md1/36inch"}
+	if {$homedir == ""} {set homedir "/data1/36inch/"}
 
 	set homedir_label [label $f1.hdl -text "Image directory:" -pady 10] 
                                       
@@ -527,17 +579,24 @@ proc resume_log {win} {
                           true -relief raised -state normal -width 30]
 	set instr_list [menu $instr_menu.intr_list -tearoff 0 -type normal]
 
-	set ilist [list "T2KB" "S2KB" "MOSAIC"]
+	set ilist [list "MOSAIC" "S2KB"]
 
 	foreach instrument $ilist {
 	  $instr_list add command -label $instrument \
              -command "$instr_menu configure -text {$instrument}"
 	}
 
-	$instr_menu configure -text "MOSAIC"
+	set c_instr [string toupper [lindex $argv 1]]
+	if {$c_instr == ""} {set c_instr "MOSAIC"}
+	$instr_menu configure -text $c_instr
 	$instr_menu configure -menu $instr_list
 	
-	set startbutton [button $f3.start -command "start_log $homedir_entry \
+	set observer_label [label $f1.obsl -text "Observer Names:" -pady 10] 
+                                      
+	set observer_entry [entry $f1.obse -width 30 -font $font2]
+        $observer_entry insert 0 ""
+
+	set startbutton [button $f3.start -command "start_log $homedir_entry $observer_entry \
               $instr_menu "\
                    -text "Start\nLogging" -font $font1 -background "SlateGray" \
                          -fg khaki -bd 4 -pady 10]
@@ -555,6 +614,8 @@ proc resume_log {win} {
 
 	grid $instr_label -row 1 -column 0
 	grid $instr_menu -row 1 -column 1
+
+	grid $observer_label $observer_entry
 
 	pack $startbutton $pausebutton -side left -padx 10 -pady 10
 
@@ -574,16 +635,20 @@ proc resume_log {win} {
 
 
 	pack [frame $g.f1] -fill both -expand yes -pady 10
-	pack [checkbutton $g.f1.recallb -variable autoprint ] -side left -anchor w -padx 15
+	grid [checkbutton $g.f1.recallb -variable autoprint ] -sticky w
+	grid [label $g.f1.recalll -text "Print log sheets automatically"] -row 0 -column 1 -sticky ew
+	grid [checkbutton $g.f1.recallbb -variable debug ] -row 1 -column 0 -sticky we
+	grid [label $g.f1.recallll -text "Display debugging information"] -row 1 -column 1 -sticky we
+
 	$g.f1.recallb select
-	pack [label $g.f1.recalll -text "Print log sheets automatically"] -side left -anchor w
-	
+	$g.f1.recallbb select
+
 
 	pack $g -fill both -expand yes
-	pack [label $sig.lab -text "10/10/99 R. Marzke          Revised 2/23/03" -font \
+	pack [label $sig.lab -text "10/10/99 R. Marzke          Revised 03/23/09 J. Dowell" -font \
               -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1 \
                 -anchor w] -fill both -expand yes
 	pack $sig -fill both -expand yes
 
-
+	set lastmtime '-1'
 

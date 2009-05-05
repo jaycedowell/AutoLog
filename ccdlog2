@@ -534,7 +534,7 @@ proc resume_log {win} {
 	}
 
 	set c_instr [string toupper [lindex $argv 1]]
-	if {$c_instr == ""} {set homedir "MOSAIC"}
+	if {$c_instr == ""} {set c_instr "MOSAIC"}
 	$instr_menu configure -text $c_instr
 	$instr_menu configure -menu $instr_list
 	
