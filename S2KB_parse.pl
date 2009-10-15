@@ -9,9 +9,9 @@ open (IN,$file);
 $lines = 0;
 $bytes = 0;
 do {
-  print "-> start do-loop\n";
+#  print "-> start do-loop\n";
   $count = read (IN,$buf,80) || die("Cannot read 80 bytes from $file.\n");
-  print "-> $buf, $count\n";
+#  print "-> $buf, $count\n";
   $bytes = $bytes + $count;
   ($name,$eq,$value) = unpack ("A8 A2 A20",$buf);
   $name =~ s/\s//g;
@@ -19,8 +19,8 @@ do {
   $header{$name} = $value;
 #  print "$name   $value  $header{$name}\n";
 
-  $lines += 1
-  print "-> $lines\n";
+  $lines += 1;
+#  print "-> $lines\n";
 } until $name eq "END" || $lines > 72;
 
 # crop RA, DEC
@@ -34,7 +34,7 @@ $header{UT} = sprintf ("%1.8s",$header{UT});
 
 # same for LST
 
-$header{LST} = sprintf ("%1.8s",$header{"LST"});
+$header{LST} = sprintf ("%1.8s",$header{LST});
 
 # get rid of decimal in exptime if it is at end of string
 
@@ -49,7 +49,7 @@ $header{EPOCH} = sprintf ("%6.1f",$header{EPOCH});
 
 #$file =~ s/(\D+)//;
 $file =~ s/(\d{1,4})\.fits//;
-$header{FILENAME} = sprintf ("%4.0f",$&);
+$header{FILENAME} = sprintf ("%4i",int($&));
 
 # format CCDSUM
 
@@ -82,5 +82,5 @@ foreach $keyword (@keywords) {
   unless (defined($header{$keyword})) {
     $header{$keyword}="??"
   }
-  print "$header{$keyword} \n"
+  print "$header{$keyword} \n";
 }
