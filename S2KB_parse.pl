@@ -1,5 +1,10 @@
 #!/usr/bin/perl -w
 
+@td = gmtime(time);
+$month = 1 + $td[4];
+$year = 1900 + $td[5];
+$datestring = "$month/$td[3]/$year @ $td[2]:$td[1]:$td[0] GMT";
+
 @keywords = (FILENAME,OBJECT,RA,DEC,EPOCH,UT,ST,"DATE-OBS",
              AIRMASS,EXPTIME,FILTER1,FILTER2,FOCUS,CCDSUM,DEWTEMP,CAMTEMP);
 
@@ -32,9 +37,11 @@ $header{DEC} = sprintf ("%1.11s",$header{DEC});
 
 $header{UT} = sprintf ("%1.8s",$header{UT});
 
-# same for LST
-
-$header{LST} = sprintf ("%1.8s",$header{LST});
+# same for LST/ST
+if( defined($header{LST}) ) {
+	$header{LST} = sprintf ("%1.8s", $header{LST});
+}
+$header{ST} = sprintf ("%1.8s", $header{ST});
 
 # get rid of decimal in exptime if it is at end of string
 
@@ -48,8 +55,9 @@ $header{EPOCH} = sprintf ("%6.1f",$header{EPOCH});
 # get image counter out of IRAF file name
 
 #$file =~ s/(\D+)//;
-$file =~ s/(\d{1,4})\.fits//;
-$header{FILENAME} = sprintf ("%4i",int($&));
+$file =~ /(\d{1,4})(?:\.fits)/;
+$header{FILENAME} = $file;
+$header{FILENAME} = sprintf("%i", int($1));
 
 # format CCDSUM
 
@@ -78,9 +86,15 @@ foreach $keyword (@keywords) {
   }
 }
 
+open(FH, "> ccdlog3.lastImage");
+printf FH "Last Image parsed: $file\n";
+printf FH "Time: $datestring\n";
 foreach $keyword (@keywords) {
   unless (defined($header{$keyword})) {
     $header{$keyword}="??"
   }
   print "$header{$keyword} \n";
+  printf FH "$keyword: $header{$keyword} \n";
 }
+close(FH);
+
