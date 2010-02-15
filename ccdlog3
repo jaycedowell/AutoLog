@@ -1,5 +1,24 @@
 #!/usr/bin/wish
 
+proc find_newest {} {
+	global path
+
+	set res ""
+	set mtime 0
+
+	# Look at each file, in alphabetically order and find the newest 
+	# (largest mtime) one.  Store that file name in 'res'.
+	foreach image [lsort [glob -dir $path "*.fits"]] {
+		set this_mtime [file mtime $image]
+		if { $this_mtime >= $mtime } {
+			set res $image
+			set mtime $this_mtime
+		}
+	}
+
+	return $res
+}
+
 proc start_log {homedir_entry observer_entry instr_menu} {
 
 	global pagecount oldfile datestring
