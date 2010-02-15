@@ -202,6 +202,12 @@ proc nextlog {} {
 			}
 		} else {
 			set newfile $oldfile
+			
+			set fileId [open "$path/ccdlog3.debug" "a"]
+			puts $fileId "ls -t returned non-zero status, skipping iteration"
+			flush $fileId
+			close $fileId
+			
 		}
 		if {$newfile != $oldfile} {
 			if {$newfile != "${path}/test.fits" && $newfile != "${path}test.fits" } {
