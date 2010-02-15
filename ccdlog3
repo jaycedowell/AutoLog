@@ -1,14 +1,16 @@
 #!/usr/bin/wish
 
-proc find_newest {} {
+proc find_newest {pattern} {
 	global path
 
-	set res ""
+	# Variables to work the most recent file 'res' and its
+	# modification time 'mtime'.
+	set res "a_fits_file_that_will_never_be_matched.fits"
 	set mtime 0
 
 	# Look at each file, in alphabetically order and find the newest 
 	# (largest mtime) one.  Store that file name in 'res'.
-	foreach image [lsort [glob -dir $path "*.fits"]] {
+	foreach image [lsort [glob -dir $path $pattern]] {
 		set this_mtime [file mtime $image]
 		if { $this_mtime >= $mtime } {
 			set res $image
@@ -16,6 +18,7 @@ proc find_newest {} {
 		}
 	}
 
+	# Return the file name
 	return $res
 }
 
@@ -206,28 +209,40 @@ proc nextlog {} {
 			close $fileId
 		}
 		set lsstart [clock clicks -milliseconds]
-		if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
-			set newfile $result
-			set lsstop [clock clicks -milliseconds]
-			set lstime [expr $lsstop - $lsstart]
-			if { $debug == 1 } {
-				puts [concat "DEBUG: ls -t command run time: " $lstime " ms"]
-				puts [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
-				set fileId [open "$path/ccdlog3.debug" "a"]
-				puts $fileId [concat "DEBUG: ls -t command run time: " $lstime " ms"]
-				puts $fileId [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
-				flush $fileId
-				close $fileId
-			}
-		} else {
-			set newfile $oldfile
-			
+		set newfile [find_newest "*.fits"]
+		set lsstop [clock clicks -milliseconds]
+		set lstime [expr $lsstop - $lsstart]
+		if { $debug == 1 } {
+			puts [concat "DEBUG: find_newest command run time: " $lstime " ms"]
+			puts [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
 			set fileId [open "$path/ccdlog3.debug" "a"]
-			puts $fileId "ls -t returned non-zero status, skipping iteration"
+			puts $fileId [concat "DEBUG: ls -t command run time: " $lstime " ms"]
+			puts $fileId [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
 			flush $fileId
 			close $fileId
-			
 		}
+# 		if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
+# 			set newfile $result
+# 			set lsstop [clock clicks -milliseconds]
+# 			set lstime [expr $lsstop - $lsstart]
+# 			if { $debug == 1 } {
+# 				puts [concat "DEBUG: ls -t command run time: " $lstime " ms"]
+# 				puts [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
+# 				set fileId [open "$path/ccdlog3.debug" "a"]
+# 				puts $fileId [concat "DEBUG: ls -t command run time: " $lstime " ms"]
+# 				puts $fileId [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
+# 				flush $fileId
+# 				close $fileId
+# 			}
+# 		} else {
+# 			set newfile $oldfile
+# 			
+# 			set fileId [open "$path/ccdlog3.debug" "a"]
+# 			puts $fileId "ls -t returned non-zero status, skipping iteration"
+# 			flush $fileId
+# 			close $fileId
+# 			
+# 		}
 		if {$newfile != $oldfile} {
 			if {$newfile != "${path}/test.fits" && $newfile != "${path}test.fits" } {
 				if {$instr == "MOSAIC"} {
@@ -731,7 +746,7 @@ proc resume_log {win} {
 
 
 	pack $g -fill both -expand yes
-	pack [label $sig.lab -text "10/10/99 R. Marzke          Revised 09/21/09 J. Dowell" -font \
+	pack [label $sig.lab -text "10/10/99 R. Marzke          Revised 02/15/10 J. Dowell" -font \
               -adobe-helvetica-medium-r-normal--12-120-75-75-p-67-iso8859-1 \
                 -anchor w] -fill both -expand yes
 	pack $sig -fill both -expand yes
