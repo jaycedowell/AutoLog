@@ -24,6 +24,21 @@ proc find_newest {pattern} {
 	return $res
 }
 
+proc dir_mtime {dir} {
+	# Variable to store the modification time 'mtime'.
+	set mtime 0
+
+	# Make sure that 'dir' is actually a directory.  If it is
+	# not, leave 'mtime' as 0.  Otherwise, set 'mtime' to the 
+	# time of last modification.
+	if {[file isdirectory $dir]} {
+		set mtime [file mtime $dir]
+	}
+	
+	# Return the modification time of 'dir'.
+	return $mtime
+}
+
 proc start_log {homedir_entry observer_entry instr_menu} {
 
 	global pagecount oldfile datestring
@@ -43,11 +58,12 @@ proc start_log {homedir_entry observer_entry instr_menu} {
 # 	}
 
 	# Holder for the last time the directory specified in $path was modified
-	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
-		regsub -all ' $result "" lastmtime
-	} else {
-		set lastmtime "0"
-	}
+	set lastmtime [dir_mtime $path]
+# 	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
+# 		regsub -all ' $result "" lastmtime
+# 	} else {
+# 		set lastmtime "0"
+# 	}
 #	puts $lastmtime
 
 #	set oldfile whatever
@@ -195,15 +211,19 @@ proc nextlog {} {
 
 	update
 	
-	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
-		regsub -all ' $result "" mtime
-	} else {
+	set mtime [dir_mtime $path]
+	if {$mtime == 0} {
 		set mtime $lastmtime
 	}
+# 	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
+# 		regsub -all ' $result "" mtime
+# 	} else {
+# 		set mtime $lastmtime
+# 	}
 
 	set has_changed 0
 
-	if {$mtime != $lastmtime} {
+	if {$mtime > $lastmtime} {
 		if { $debug == 1 } {
 			puts [concat "DEBUG: latest modification time: " [clock format [expr $mtime] -format "%T %D"]]
 			set fileId [open "$path/ccdlog3.debug" "a"]
@@ -626,11 +646,12 @@ proc resume_log {win} {
 #         }
 
 	# Holder for the last time the directory specified in $path was modified
-	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
-			set lastmtime $result
-	} else {
-		set lastmtime '0'
-	}
+	set lastmtime [dir_mtime $path]
+# 	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
+# 			set lastmtime $result
+# 	} else {
+# 		set lastmtime '0'
+# 	}
 
 	nextlog 
 }
