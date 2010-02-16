@@ -51,11 +51,6 @@ proc start_log {homedir_entry observer_entry instr_menu} {
 	set instr [$instr_menu cget -text]
 
 	set oldfile [find_newest "*.fits"]
-# 	if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
-# 		set oldfile $result
-# 	} else {
-# 		set oldfile "a_fits_file_that_will_never_be_matched.fits"
-# 	}
 
 	# Holder for the last time the directory specified in $path was modified
 	set lastmtime [dir_mtime $path]
@@ -212,9 +207,6 @@ proc nextlog {} {
 	update
 	
 	set mtime [dir_mtime $path]
-	if {$mtime == 0} {
-		set mtime $lastmtime
-	}
 # 	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
 # 		regsub -all ' $result "" mtime
 # 	} else {
@@ -226,11 +218,13 @@ proc nextlog {} {
 	if {$mtime > $lastmtime} {
 		if { $debug == 1 } {
 			puts [concat "DEBUG: latest modification time: " [clock format [expr $mtime] -format "%T %D"]]
+
 			set fileId [open "$path/ccdlog3.debug" "a"]
 			puts $fileId [concat "DEBUG: latest modification time: " [clock format [expr $mtime] -format "%T %D"]]
 			flush $fileId
 			close $fileId
 		}
+
 		set lsstart [clock clicks -milliseconds]
 		set newfile [find_newest "*.fits"]
 		set lsstop [clock clicks -milliseconds]
@@ -238,34 +232,14 @@ proc nextlog {} {
 		if { $debug == 1 } {
 			puts [concat "DEBUG: find_newest command run time: " $lstime " ms"]
 			puts [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
+
 			set fileId [open "$path/ccdlog3.debug" "a"]
-			puts $fileId [concat "DEBUG: ls -t command run time: " $lstime " ms"]
+			puts $fileId [concat "DEBUG: find_newest command run time: " $lstime " ms"]
 			puts $fileId [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
 			flush $fileId
 			close $fileId
 		}
-# 		if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
-# 			set newfile $result
-# 			set lsstop [clock clicks -milliseconds]
-# 			set lstime [expr $lsstop - $lsstart]
-# 			if { $debug == 1 } {
-# 				puts [concat "DEBUG: ls -t command run time: " $lstime " ms"]
-# 				puts [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
-# 				set fileId [open "$path/ccdlog3.debug" "a"]
-# 				puts $fileId [concat "DEBUG: ls -t command run time: " $lstime " ms"]
-# 				puts $fileId [concat "DEBUG: old file " $oldfile " <=> new file " $newfile]
-# 				flush $fileId
-# 				close $fileId
-# 			}
-# 		} else {
-# 			set newfile $oldfile
-# 			
-# 			set fileId [open "$path/ccdlog3.debug" "a"]
-# 			puts $fileId "ls -t returned non-zero status, skipping iteration"
-# 			flush $fileId
-# 			close $fileId
-# 			
-# 		}
+
 		if {$newfile != $oldfile} {
 			if {$newfile != "${path}/test.fits" && $newfile != "${path}test.fits" } {
 				if {$instr == "MOSAIC"} {
@@ -280,6 +254,7 @@ proc nextlog {} {
 			} else {
 				if { $debug == 1 } {
 					puts "DEBUG: test.fits file found, skipping"
+
 					set fileId [open "$path/ccdlog3.debug" "a"]
 					puts $fileId "DEBUG: test.fits file found, skipping"
 					flush $fileId
@@ -294,6 +269,7 @@ proc nextlog {} {
 	if { $has_changed == 1 } {
 		if { $debug == 1 } {
 			puts [concat "DEBUG: total nextlog run time: " $nltime " ms"]
+
 			set fileId [open "$path/ccdlog3.debug" "a"]
 			puts $fileId [concat "DEBUG: total nextlog run time: " $nltime " ms"]
 			flush $fileId
@@ -641,9 +617,6 @@ proc resume_log {win} {
 	pack $pausebutton -side left -padx 10 -pady 10
 
 	set oldfile [find_newest "*.fits"]
-#         if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
-#           set oldfile $result
-#         }
 
 	# Holder for the last time the directory specified in $path was modified
 	set lastmtime [dir_mtime $path]
