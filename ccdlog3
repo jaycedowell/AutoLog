@@ -10,7 +10,7 @@ proc find_newest {pattern} {
 
 	# Look at each file, in alphabetically order and find the newest 
 	# (largest mtime) one.  Store that file name in 'res'.
-	foreach image [lsort [glob -dir $path $pattern]] {
+	foreach image [lsort [glob -nocomplain -dir $path $pattern]] {
 		set this_mtime [file mtime $image]
 		if { $this_mtime >= $mtime } {
 			set res $image
@@ -18,7 +18,9 @@ proc find_newest {pattern} {
 		}
 	}
 
-	# Return the file name
+	# Return the file name.  If nothing matching $pattern is found in 
+	# $path, a filename of 'a_fits_file_that_will_never_be_matched.fits'
+	# is returned.
 	return $res
 }
 
@@ -33,11 +35,12 @@ proc start_log {homedir_entry observer_entry instr_menu} {
 	set observer [$observer_entry get]
 	set instr [$instr_menu cget -text]
 
-	if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
-		set oldfile $result
-	} else {
-		set oldfile "a_fits_file_that_will_never_be_matched.fits"
-	}
+	set oldfile [find_newest "*.fits"]
+# 	if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
+# 		set oldfile $result
+# 	} else {
+# 		set oldfile "a_fits_file_that_will_never_be_matched.fits"
+# 	}
 
 	# Holder for the last time the directory specified in $path was modified
 	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
@@ -617,9 +620,10 @@ proc resume_log {win} {
 	$pausebutton configure -command "pause_log $win"
 	pack $pausebutton -side left -padx 10 -pady 10
 
-        if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
-          set oldfile $result
-        }
+	set oldfile [find_newest "*.fits"]
+#         if {[catch {eval exec "ls -t [glob $path/*.fits] | head -1"} result] == 0} {
+#           set oldfile $result
+#         }
 
 	# Holder for the last time the directory specified in $path was modified
 	if {[catch {eval exec "stat --format='%Y' $path"} result] == 0} {
