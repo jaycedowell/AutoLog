@@ -1,0 +1,1216 @@
+--- ccdlog3 started on February 15, 2010 @ 20:58:45 GMT ---
+--- path set to /data1/36inch/zerotest ---
+--- instrument set to S2KB ---
+--- observer(s) is/are ---
+DEBUG: latest modification time: 13:58:45 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 13:59:43 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 13:59:52 02/15/10
+DEBUG: ls -t command run time: 226 ms
+DEBUG: old file a_fits_file_that_will_never_be_matched.fits <=> new file /data1/36inch/zerotest/n30001.fits
+DEBUG: S2KB_parse.pl command run time: 114 ms
+DEBUG: total nextlog run time: 3552 ms
+DEBUG: latest modification time: 13:59:57 02/15/10
+DEBUG: ls -t command run time: 66 ms
+DEBUG: old file /data1/36inch/zerotest/n30001.fits <=> new file /data1/36inch/zerotest/n30001.fits
+DEBUG: latest modification time: 14:00:01 02/15/10
+DEBUG: ls -t command run time: 42 ms
+DEBUG: old file /data1/36inch/zerotest/n30001.fits <=> new file /data1/36inch/zerotest/n30001.fits
+DEBUG: latest modification time: 14:00:10 02/15/10
+DEBUG: ls -t command run time: 52 ms
+DEBUG: old file /data1/36inch/zerotest/n30001.fits <=> new file /data1/36inch/zerotest/n30002.fits
+DEBUG: S2KB_parse.pl command run time: 68 ms
+DEBUG: total nextlog run time: 3351 ms
+DEBUG: latest modification time: 14:00:18 02/15/10
+DEBUG: ls -t command run time: 53 ms
+DEBUG: old file /data1/36inch/zerotest/n30002.fits <=> new file /data1/36inch/zerotest/n30002.fits
+DEBUG: latest modification time: 14:00:27 02/15/10
+DEBUG: ls -t command run time: 46 ms
+DEBUG: old file /data1/36inch/zerotest/n30002.fits <=> new file /data1/36inch/zerotest/n30003.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3246 ms
+DEBUG: latest modification time: 14:00:35 02/15/10
+DEBUG: ls -t command run time: 47 ms
+DEBUG: old file /data1/36inch/zerotest/n30003.fits <=> new file /data1/36inch/zerotest/n30003.fits
+DEBUG: latest modification time: 14:00:44 02/15/10
+DEBUG: ls -t command run time: 42 ms
+DEBUG: old file /data1/36inch/zerotest/n30003.fits <=> new file /data1/36inch/zerotest/n30004.fits
+DEBUG: S2KB_parse.pl command run time: 88 ms
+DEBUG: total nextlog run time: 3313 ms
+DEBUG: latest modification time: 14:00:53 02/15/10
+DEBUG: ls -t command run time: 99 ms
+DEBUG: old file /data1/36inch/zerotest/n30004.fits <=> new file /data1/36inch/zerotest/n30004.fits
+DEBUG: latest modification time: 14:01:02 02/15/10
+DEBUG: ls -t command run time: 83 ms
+DEBUG: old file /data1/36inch/zerotest/n30004.fits <=> new file /data1/36inch/zerotest/n30005.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3353 ms
+DEBUG: latest modification time: 14:01:10 02/15/10
+DEBUG: ls -t command run time: 47 ms
+DEBUG: old file /data1/36inch/zerotest/n30005.fits <=> new file /data1/36inch/zerotest/n30005.fits
+DEBUG: latest modification time: 14:01:19 02/15/10
+DEBUG: ls -t command run time: 224 ms
+DEBUG: old file /data1/36inch/zerotest/n30005.fits <=> new file /data1/36inch/zerotest/n30006.fits
+DEBUG: S2KB_parse.pl command run time: 62 ms
+DEBUG: total nextlog run time: 3524 ms
+DEBUG: latest modification time: 14:01:28 02/15/10
+DEBUG: ls -t command run time: 40 ms
+DEBUG: old file /data1/36inch/zerotest/n30006.fits <=> new file /data1/36inch/zerotest/n30006.fits
+DEBUG: latest modification time: 14:01:37 02/15/10
+DEBUG: ls -t command run time: 40 ms
+DEBUG: old file /data1/36inch/zerotest/n30006.fits <=> new file /data1/36inch/zerotest/n30007.fits
+DEBUG: S2KB_parse.pl command run time: 59 ms
+DEBUG: total nextlog run time: 3302 ms
+DEBUG: latest modification time: 14:01:46 02/15/10
+DEBUG: ls -t command run time: 49 ms
+DEBUG: old file /data1/36inch/zerotest/n30007.fits <=> new file /data1/36inch/zerotest/n30007.fits
+DEBUG: latest modification time: 14:01:55 02/15/10
+DEBUG: ls -t command run time: 54 ms
+DEBUG: old file /data1/36inch/zerotest/n30007.fits <=> new file /data1/36inch/zerotest/n30008.fits
+DEBUG: S2KB_parse.pl command run time: 50 ms
+DEBUG: total nextlog run time: 3320 ms
+DEBUG: latest modification time: 14:02:03 02/15/10
+DEBUG: ls -t command run time: 48 ms
+DEBUG: old file /data1/36inch/zerotest/n30008.fits <=> new file /data1/36inch/zerotest/n30008.fits
+DEBUG: latest modification time: 14:02:12 02/15/10
+DEBUG: ls -t command run time: 51 ms
+DEBUG: old file /data1/36inch/zerotest/n30008.fits <=> new file /data1/36inch/zerotest/n30009.fits
+DEBUG: S2KB_parse.pl command run time: 53 ms
+DEBUG: total nextlog run time: 3547 ms
+DEBUG: latest modification time: 14:02:21 02/15/10
+DEBUG: ls -t command run time: 73 ms
+DEBUG: old file /data1/36inch/zerotest/n30009.fits <=> new file /data1/36inch/zerotest/n30009.fits
+DEBUG: latest modification time: 14:02:30 02/15/10
+DEBUG: ls -t command run time: 76 ms
+DEBUG: old file /data1/36inch/zerotest/n30009.fits <=> new file /data1/36inch/zerotest/n30010.fits
+DEBUG: S2KB_parse.pl command run time: 73 ms
+DEBUG: total nextlog run time: 3386 ms
+DEBUG: latest modification time: 14:02:39 02/15/10
+DEBUG: ls -t command run time: 46 ms
+DEBUG: old file /data1/36inch/zerotest/n30010.fits <=> new file /data1/36inch/zerotest/n30010.fits
+DEBUG: latest modification time: 14:02:48 02/15/10
+DEBUG: ls -t command run time: 58 ms
+DEBUG: old file /data1/36inch/zerotest/n30010.fits <=> new file /data1/36inch/zerotest/n30011.fits
+DEBUG: S2KB_parse.pl command run time: 53 ms
+DEBUG: total nextlog run time: 3357 ms
+DEBUG: latest modification time: 14:02:56 02/15/10
+DEBUG: ls -t command run time: 49 ms
+DEBUG: old file /data1/36inch/zerotest/n30011.fits <=> new file /data1/36inch/zerotest/n30011.fits
+DEBUG: latest modification time: 14:03:05 02/15/10
+DEBUG: ls -t command run time: 43 ms
+DEBUG: old file /data1/36inch/zerotest/n30011.fits <=> new file /data1/36inch/zerotest/n30012.fits
+DEBUG: S2KB_parse.pl command run time: 44 ms
+DEBUG: total nextlog run time: 3619 ms
+DEBUG: latest modification time: 14:03:14 02/15/10
+DEBUG: ls -t command run time: 44 ms
+DEBUG: old file /data1/36inch/zerotest/n30012.fits <=> new file /data1/36inch/zerotest/n30012.fits
+DEBUG: latest modification time: 14:03:23 02/15/10
+DEBUG: ls -t command run time: 61 ms
+DEBUG: old file /data1/36inch/zerotest/n30012.fits <=> new file /data1/36inch/zerotest/n30013.fits
+DEBUG: S2KB_parse.pl command run time: 50 ms
+DEBUG: total nextlog run time: 3323 ms
+DEBUG: latest modification time: 14:03:27 02/15/10
+DEBUG: ls -t command run time: 126 ms
+DEBUG: old file /data1/36inch/zerotest/n30013.fits <=> new file /data1/36inch/zerotest/n30013.fits
+DEBUG: latest modification time: 14:03:31 02/15/10
+DEBUG: ls -t command run time: 149 ms
+DEBUG: old file /data1/36inch/zerotest/n30013.fits <=> new file /data1/36inch/zerotest/n30013.fits
+DEBUG: latest modification time: 14:03:40 02/15/10
+DEBUG: ls -t command run time: 94 ms
+DEBUG: old file /data1/36inch/zerotest/n30013.fits <=> new file /data1/36inch/zerotest/n30014.fits
+DEBUG: S2KB_parse.pl command run time: 73 ms
+DEBUG: total nextlog run time: 3362 ms
+DEBUG: latest modification time: 14:03:49 02/15/10
+DEBUG: ls -t command run time: 55 ms
+DEBUG: old file /data1/36inch/zerotest/n30014.fits <=> new file /data1/36inch/zerotest/n30014.fits
+DEBUG: latest modification time: 14:03:58 02/15/10
+DEBUG: ls -t command run time: 116 ms
+DEBUG: old file /data1/36inch/zerotest/n30014.fits <=> new file /data1/36inch/zerotest/n30015.fits
+DEBUG: S2KB_parse.pl command run time: 101 ms
+DEBUG: total nextlog run time: 3584 ms
+DEBUG: latest modification time: 14:04:07 02/15/10
+DEBUG: ls -t command run time: 97 ms
+DEBUG: old file /data1/36inch/zerotest/n30015.fits <=> new file /data1/36inch/zerotest/n30015.fits
+DEBUG: latest modification time: 14:04:16 02/15/10
+DEBUG: ls -t command run time: 63 ms
+DEBUG: old file /data1/36inch/zerotest/n30015.fits <=> new file /data1/36inch/zerotest/n30016.fits
+DEBUG: S2KB_parse.pl command run time: 86 ms
+DEBUG: total nextlog run time: 3368 ms
+DEBUG: latest modification time: 14:04:24 02/15/10
+DEBUG: ls -t command run time: 87 ms
+DEBUG: old file /data1/36inch/zerotest/n30016.fits <=> new file /data1/36inch/zerotest/n30016.fits
+DEBUG: latest modification time: 14:04:33 02/15/10
+DEBUG: ls -t command run time: 53 ms
+DEBUG: old file /data1/36inch/zerotest/n30016.fits <=> new file /data1/36inch/zerotest/n30017.fits
+DEBUG: S2KB_parse.pl command run time: 68 ms
+DEBUG: total nextlog run time: 3319 ms
+DEBUG: latest modification time: 14:04:41 02/15/10
+DEBUG: ls -t command run time: 81 ms
+DEBUG: old file /data1/36inch/zerotest/n30017.fits <=> new file /data1/36inch/zerotest/n30017.fits
+DEBUG: latest modification time: 14:04:51 02/15/10
+DEBUG: ls -t command run time: 93 ms
+DEBUG: old file /data1/36inch/zerotest/n30017.fits <=> new file /data1/36inch/zerotest/n30018.fits
+DEBUG: S2KB_parse.pl command run time: 138 ms
+DEBUG: total nextlog run time: 3438 ms
+DEBUG: latest modification time: 14:04:59 02/15/10
+DEBUG: ls -t command run time: 81 ms
+DEBUG: old file /data1/36inch/zerotest/n30018.fits <=> new file /data1/36inch/zerotest/n30018.fits
+DEBUG: latest modification time: 14:05:08 02/15/10
+DEBUG: ls -t command run time: 86 ms
+DEBUG: old file /data1/36inch/zerotest/n30018.fits <=> new file /data1/36inch/zerotest/n30019.fits
+DEBUG: S2KB_parse.pl command run time: 31 ms
+DEBUG: total nextlog run time: 3556 ms
+DEBUG: latest modification time: 14:05:16 02/15/10
+DEBUG: ls -t command run time: 102 ms
+DEBUG: old file /data1/36inch/zerotest/n30019.fits <=> new file /data1/36inch/zerotest/n30019.fits
+DEBUG: latest modification time: 14:05:25 02/15/10
+DEBUG: ls -t command run time: 55 ms
+DEBUG: old file /data1/36inch/zerotest/n30019.fits <=> new file /data1/36inch/zerotest/n30020.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3267 ms
+DEBUG: latest modification time: 14:05:34 02/15/10
+DEBUG: ls -t command run time: 67 ms
+DEBUG: old file /data1/36inch/zerotest/n30020.fits <=> new file /data1/36inch/zerotest/n30020.fits
+DEBUG: latest modification time: 14:05:43 02/15/10
+DEBUG: ls -t command run time: 63 ms
+DEBUG: old file /data1/36inch/zerotest/n30020.fits <=> new file /data1/36inch/zerotest/n30021.fits
+DEBUG: S2KB_parse.pl command run time: 73 ms
+DEBUG: total nextlog run time: 3367 ms
+DEBUG: latest modification time: 14:05:51 02/15/10
+DEBUG: ls -t command run time: 68 ms
+DEBUG: old file /data1/36inch/zerotest/n30021.fits <=> new file /data1/36inch/zerotest/n30021.fits
+DEBUG: latest modification time: 14:06:01 02/15/10
+DEBUG: ls -t command run time: 66 ms
+DEBUG: old file /data1/36inch/zerotest/n30021.fits <=> new file /data1/36inch/zerotest/n30022.fits
+DEBUG: S2KB_parse.pl command run time: 134 ms
+DEBUG: total nextlog run time: 3491 ms
+DEBUG: latest modification time: 14:06:09 02/15/10
+DEBUG: ls -t command run time: 108 ms
+DEBUG: old file /data1/36inch/zerotest/n30022.fits <=> new file /data1/36inch/zerotest/n30022.fits
+DEBUG: latest modification time: 14:06:19 02/15/10
+DEBUG: ls -t command run time: 92 ms
+DEBUG: old file /data1/36inch/zerotest/n30022.fits <=> new file /data1/36inch/zerotest/n30023.fits
+DEBUG: S2KB_parse.pl command run time: 54 ms
+DEBUG: total nextlog run time: 3605 ms
+DEBUG: latest modification time: 14:06:27 02/15/10
+DEBUG: ls -t command run time: 61 ms
+DEBUG: old file /data1/36inch/zerotest/n30023.fits <=> new file /data1/36inch/zerotest/n30023.fits
+DEBUG: latest modification time: 14:06:36 02/15/10
+DEBUG: ls -t command run time: 67 ms
+DEBUG: old file /data1/36inch/zerotest/n30023.fits <=> new file /data1/36inch/zerotest/n30024.fits
+DEBUG: S2KB_parse.pl command run time: 79 ms
+DEBUG: total nextlog run time: 3357 ms
+DEBUG: latest modification time: 14:06:40 02/15/10
+DEBUG: ls -t command run time: 80 ms
+DEBUG: old file /data1/36inch/zerotest/n30024.fits <=> new file /data1/36inch/zerotest/n30024.fits
+DEBUG: latest modification time: 14:06:44 02/15/10
+DEBUG: ls -t command run time: 130 ms
+DEBUG: old file /data1/36inch/zerotest/n30024.fits <=> new file /data1/36inch/zerotest/n30024.fits
+DEBUG: latest modification time: 14:06:53 02/15/10
+DEBUG: ls -t command run time: 60 ms
+DEBUG: old file /data1/36inch/zerotest/n30024.fits <=> new file /data1/36inch/zerotest/n30025.fits
+DEBUG: S2KB_parse.pl command run time: 73 ms
+DEBUG: total nextlog run time: 3386 ms
+DEBUG: latest modification time: 14:07:01 02/15/10
+DEBUG: ls -t command run time: 122 ms
+DEBUG: old file /data1/36inch/zerotest/n30025.fits <=> new file /data1/36inch/zerotest/n30025.fits
+DEBUG: latest modification time: 14:07:11 02/15/10
+DEBUG: ls -t command run time: 71 ms
+DEBUG: old file /data1/36inch/zerotest/n30025.fits <=> new file /data1/36inch/zerotest/n30026.fits
+DEBUG: S2KB_parse.pl command run time: 53 ms
+DEBUG: total nextlog run time: 3308 ms
+DEBUG: latest modification time: 14:07:19 02/15/10
+DEBUG: ls -t command run time: 55 ms
+DEBUG: old file /data1/36inch/zerotest/n30026.fits <=> new file /data1/36inch/zerotest/n30026.fits
+DEBUG: latest modification time: 14:07:28 02/15/10
+DEBUG: ls -t command run time: 93 ms
+DEBUG: old file /data1/36inch/zerotest/n30026.fits <=> new file /data1/36inch/zerotest/n30027.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3339 ms
+DEBUG: latest modification time: 14:07:36 02/15/10
+DEBUG: ls -t command run time: 121 ms
+DEBUG: old file /data1/36inch/zerotest/n30027.fits <=> new file /data1/36inch/zerotest/n30027.fits
+DEBUG: latest modification time: 14:07:45 02/15/10
+DEBUG: ls -t command run time: 115 ms
+DEBUG: old file /data1/36inch/zerotest/n30027.fits <=> new file /data1/36inch/zerotest/n30028.fits
+DEBUG: S2KB_parse.pl command run time: 78 ms
+DEBUG: total nextlog run time: 3409 ms
+DEBUG: latest modification time: 14:07:54 02/15/10
+DEBUG: ls -t command run time: 115 ms
+DEBUG: old file /data1/36inch/zerotest/n30028.fits <=> new file /data1/36inch/zerotest/n30028.fits
+DEBUG: latest modification time: 14:08:03 02/15/10
+DEBUG: ls -t command run time: 73 ms
+DEBUG: old file /data1/36inch/zerotest/n30028.fits <=> new file /data1/36inch/zerotest/n30029.fits
+DEBUG: S2KB_parse.pl command run time: 54 ms
+DEBUG: total nextlog run time: 3347 ms
+DEBUG: latest modification time: 14:08:12 02/15/10
+DEBUG: ls -t command run time: 61 ms
+DEBUG: old file /data1/36inch/zerotest/n30029.fits <=> new file /data1/36inch/zerotest/n30029.fits
+DEBUG: latest modification time: 14:08:21 02/15/10
+DEBUG: ls -t command run time: 86 ms
+DEBUG: old file /data1/36inch/zerotest/n30029.fits <=> new file /data1/36inch/zerotest/n30030.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3355 ms
+DEBUG: latest modification time: 14:08:29 02/15/10
+DEBUG: ls -t command run time: 58 ms
+DEBUG: old file /data1/36inch/zerotest/n30030.fits <=> new file /data1/36inch/zerotest/n30030.fits
+DEBUG: latest modification time: 14:08:38 02/15/10
+DEBUG: ls -t command run time: 301 ms
+DEBUG: old file /data1/36inch/zerotest/n30030.fits <=> new file /data1/36inch/zerotest/n30031.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3618 ms
+DEBUG: latest modification time: 14:08:47 02/15/10
+DEBUG: ls -t command run time: 109 ms
+DEBUG: old file /data1/36inch/zerotest/n30031.fits <=> new file /data1/36inch/zerotest/n30031.fits
+DEBUG: latest modification time: 14:08:56 02/15/10
+DEBUG: ls -t command run time: 287 ms
+DEBUG: old file /data1/36inch/zerotest/n30031.fits <=> new file /data1/36inch/zerotest/n30032.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3552 ms
+DEBUG: latest modification time: 14:09:05 02/15/10
+DEBUG: ls -t command run time: 101 ms
+DEBUG: old file /data1/36inch/zerotest/n30032.fits <=> new file /data1/36inch/zerotest/n30032.fits
+DEBUG: latest modification time: 14:09:14 02/15/10
+DEBUG: ls -t command run time: 63 ms
+DEBUG: old file /data1/36inch/zerotest/n30032.fits <=> new file /data1/36inch/zerotest/n30033.fits
+DEBUG: S2KB_parse.pl command run time: 92 ms
+DEBUG: total nextlog run time: 3346 ms
+DEBUG: latest modification time: 14:09:22 02/15/10
+DEBUG: ls -t command run time: 64 ms
+DEBUG: old file /data1/36inch/zerotest/n30033.fits <=> new file /data1/36inch/zerotest/n30033.fits
+DEBUG: latest modification time: 14:09:31 02/15/10
+DEBUG: ls -t command run time: 92 ms
+DEBUG: old file /data1/36inch/zerotest/n30033.fits <=> new file /data1/36inch/zerotest/n30034.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3700 ms
+DEBUG: latest modification time: 14:09:40 02/15/10
+DEBUG: ls -t command run time: 145 ms
+DEBUG: old file /data1/36inch/zerotest/n30034.fits <=> new file /data1/36inch/zerotest/n30034.fits
+DEBUG: latest modification time: 14:09:49 02/15/10
+DEBUG: ls -t command run time: 55 ms
+DEBUG: old file /data1/36inch/zerotest/n30034.fits <=> new file /data1/36inch/zerotest/n30035.fits
+DEBUG: S2KB_parse.pl command run time: 72 ms
+DEBUG: total nextlog run time: 3326 ms
+DEBUG: latest modification time: 14:09:53 02/15/10
+DEBUG: ls -t command run time: 62 ms
+DEBUG: old file /data1/36inch/zerotest/n30035.fits <=> new file /data1/36inch/zerotest/n30035.fits
+DEBUG: latest modification time: 14:09:57 02/15/10
+DEBUG: ls -t command run time: 109 ms
+DEBUG: old file /data1/36inch/zerotest/n30035.fits <=> new file /data1/36inch/zerotest/n30035.fits
+DEBUG: latest modification time: 14:10:06 02/15/10
+DEBUG: ls -t command run time: 83 ms
+DEBUG: old file /data1/36inch/zerotest/n30035.fits <=> new file /data1/36inch/zerotest/n30036.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3474 ms
+DEBUG: latest modification time: 14:10:15 02/15/10
+DEBUG: ls -t command run time: 94 ms
+DEBUG: old file /data1/36inch/zerotest/n30036.fits <=> new file /data1/36inch/zerotest/n30036.fits
+DEBUG: latest modification time: 14:10:24 02/15/10
+DEBUG: ls -t command run time: 84 ms
+DEBUG: old file /data1/36inch/zerotest/n30036.fits <=> new file /data1/36inch/zerotest/n30037.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3317 ms
+DEBUG: latest modification time: 14:10:32 02/15/10
+DEBUG: ls -t command run time: 68 ms
+DEBUG: old file /data1/36inch/zerotest/n30037.fits <=> new file /data1/36inch/zerotest/n30037.fits
+DEBUG: latest modification time: 14:10:41 02/15/10
+DEBUG: ls -t command run time: 125 ms
+DEBUG: old file /data1/36inch/zerotest/n30037.fits <=> new file /data1/36inch/zerotest/n30038.fits
+DEBUG: S2KB_parse.pl command run time: 63 ms
+DEBUG: total nextlog run time: 3440 ms
+DEBUG: latest modification time: 14:10:50 02/15/10
+DEBUG: ls -t command run time: 134 ms
+DEBUG: old file /data1/36inch/zerotest/n30038.fits <=> new file /data1/36inch/zerotest/n30038.fits
+DEBUG: latest modification time: 14:11:00 02/15/10
+DEBUG: ls -t command run time: 103 ms
+DEBUG: old file /data1/36inch/zerotest/n30038.fits <=> new file /data1/36inch/zerotest/n30039.fits
+DEBUG: S2KB_parse.pl command run time: 112 ms
+DEBUG: total nextlog run time: 3448 ms
+DEBUG: latest modification time: 14:11:08 02/15/10
+DEBUG: ls -t command run time: 96 ms
+DEBUG: old file /data1/36inch/zerotest/n30039.fits <=> new file /data1/36inch/zerotest/n30039.fits
+DEBUG: latest modification time: 14:11:17 02/15/10
+DEBUG: ls -t command run time: 84 ms
+DEBUG: old file /data1/36inch/zerotest/n30039.fits <=> new file /data1/36inch/zerotest/n30040.fits
+DEBUG: S2KB_parse.pl command run time: 40 ms
+DEBUG: total nextlog run time: 3341 ms
+DEBUG: latest modification time: 14:11:26 02/15/10
+DEBUG: ls -t command run time: 151 ms
+DEBUG: old file /data1/36inch/zerotest/n30040.fits <=> new file /data1/36inch/zerotest/n30040.fits
+DEBUG: latest modification time: 14:11:35 02/15/10
+DEBUG: ls -t command run time: 115 ms
+DEBUG: old file /data1/36inch/zerotest/n30040.fits <=> new file /data1/36inch/zerotest/n30041.fits
+DEBUG: S2KB_parse.pl command run time: 68 ms
+DEBUG: total nextlog run time: 3616 ms
+DEBUG: latest modification time: 14:11:43 02/15/10
+DEBUG: ls -t command run time: 158 ms
+DEBUG: old file /data1/36inch/zerotest/n30041.fits <=> new file /data1/36inch/zerotest/n30041.fits
+DEBUG: latest modification time: 14:11:52 02/15/10
+DEBUG: ls -t command run time: 74 ms
+DEBUG: old file /data1/36inch/zerotest/n30041.fits <=> new file /data1/36inch/zerotest/n30042.fits
+DEBUG: S2KB_parse.pl command run time: 31 ms
+DEBUG: total nextlog run time: 3314 ms
+DEBUG: latest modification time: 14:12:00 02/15/10
+DEBUG: ls -t command run time: 143 ms
+DEBUG: old file /data1/36inch/zerotest/n30042.fits <=> new file /data1/36inch/zerotest/n30042.fits
+DEBUG: latest modification time: 14:12:09 02/15/10
+DEBUG: ls -t command run time: 65 ms
+DEBUG: old file /data1/36inch/zerotest/n30042.fits <=> new file /data1/36inch/zerotest/n30043.fits
+DEBUG: S2KB_parse.pl command run time: 68 ms
+DEBUG: total nextlog run time: 3408 ms
+DEBUG: latest modification time: 14:12:18 02/15/10
+DEBUG: ls -t command run time: 66 ms
+DEBUG: old file /data1/36inch/zerotest/n30043.fits <=> new file /data1/36inch/zerotest/n30043.fits
+DEBUG: latest modification time: 14:12:27 02/15/10
+DEBUG: ls -t command run time: 74 ms
+DEBUG: old file /data1/36inch/zerotest/n30043.fits <=> new file /data1/36inch/zerotest/n30044.fits
+DEBUG: S2KB_parse.pl command run time: 45 ms
+DEBUG: total nextlog run time: 3324 ms
+DEBUG: latest modification time: 14:12:36 02/15/10
+DEBUG: ls -t command run time: 102 ms
+DEBUG: old file /data1/36inch/zerotest/n30044.fits <=> new file /data1/36inch/zerotest/n30044.fits
+DEBUG: latest modification time: 14:12:45 02/15/10
+DEBUG: ls -t command run time: 64 ms
+DEBUG: old file /data1/36inch/zerotest/n30044.fits <=> new file /data1/36inch/zerotest/n30045.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3487 ms
+DEBUG: latest modification time: 14:12:53 02/15/10
+DEBUG: ls -t command run time: 72 ms
+DEBUG: old file /data1/36inch/zerotest/n30045.fits <=> new file /data1/36inch/zerotest/n30045.fits
+DEBUG: latest modification time: 14:13:02 02/15/10
+DEBUG: ls -t command run time: 84 ms
+DEBUG: old file /data1/36inch/zerotest/n30045.fits <=> new file /data1/36inch/zerotest/n30046.fits
+DEBUG: S2KB_parse.pl command run time: 31 ms
+DEBUG: total nextlog run time: 3294 ms
+DEBUG: latest modification time: 14:13:06 02/15/10
+DEBUG: ls -t command run time: 126 ms
+DEBUG: old file /data1/36inch/zerotest/n30046.fits <=> new file /data1/36inch/zerotest/n30046.fits
+DEBUG: latest modification time: 14:13:11 02/15/10
+DEBUG: ls -t command run time: 141 ms
+DEBUG: old file /data1/36inch/zerotest/n30046.fits <=> new file /data1/36inch/zerotest/n30046.fits
+DEBUG: latest modification time: 14:13:20 02/15/10
+DEBUG: ls -t command run time: 85 ms
+DEBUG: old file /data1/36inch/zerotest/n30046.fits <=> new file /data1/36inch/zerotest/n30047.fits
+DEBUG: S2KB_parse.pl command run time: 107 ms
+DEBUG: total nextlog run time: 3481 ms
+DEBUG: latest modification time: 14:13:29 02/15/10
+DEBUG: ls -t command run time: 212 ms
+DEBUG: old file /data1/36inch/zerotest/n30047.fits <=> new file /data1/36inch/zerotest/n30047.fits
+DEBUG: latest modification time: 14:13:38 02/15/10
+DEBUG: ls -t command run time: 189 ms
+DEBUG: old file /data1/36inch/zerotest/n30047.fits <=> new file /data1/36inch/zerotest/n30048.fits
+DEBUG: S2KB_parse.pl command run time: 239 ms
+DEBUG: total nextlog run time: 3631 ms
+DEBUG: latest modification time: 14:13:47 02/15/10
+DEBUG: ls -t command run time: 71 ms
+DEBUG: old file /data1/36inch/zerotest/n30048.fits <=> new file /data1/36inch/zerotest/n30048.fits
+DEBUG: latest modification time: 14:13:56 02/15/10
+DEBUG: ls -t command run time: 77 ms
+DEBUG: old file /data1/36inch/zerotest/n30048.fits <=> new file /data1/36inch/zerotest/n30049.fits
+DEBUG: S2KB_parse.pl command run time: 36 ms
+DEBUG: total nextlog run time: 3541 ms
+DEBUG: latest modification time: 14:14:04 02/15/10
+DEBUG: ls -t command run time: 107 ms
+DEBUG: old file /data1/36inch/zerotest/n30049.fits <=> new file /data1/36inch/zerotest/n30049.fits
+DEBUG: latest modification time: 14:14:13 02/15/10
+DEBUG: ls -t command run time: 132 ms
+DEBUG: old file /data1/36inch/zerotest/n30049.fits <=> new file /data1/36inch/zerotest/n30050.fits
+DEBUG: S2KB_parse.pl command run time: 36 ms
+DEBUG: total nextlog run time: 3442 ms
+DEBUG: latest modification time: 14:14:21 02/15/10
+DEBUG: ls -t command run time: 75 ms
+DEBUG: old file /data1/36inch/zerotest/n30050.fits <=> new file /data1/36inch/zerotest/n30050.fits
+DEBUG: latest modification time: 14:14:30 02/15/10
+DEBUG: ls -t command run time: 118 ms
+DEBUG: old file /data1/36inch/zerotest/n30050.fits <=> new file /data1/36inch/zerotest/n30051.fits
+DEBUG: S2KB_parse.pl command run time: 64 ms
+DEBUG: total nextlog run time: 3426 ms
+DEBUG: latest modification time: 14:14:39 02/15/10
+DEBUG: ls -t command run time: 102 ms
+DEBUG: old file /data1/36inch/zerotest/n30051.fits <=> new file /data1/36inch/zerotest/n30051.fits
+DEBUG: latest modification time: 14:14:48 02/15/10
+DEBUG: ls -t command run time: 80 ms
+DEBUG: old file /data1/36inch/zerotest/n30051.fits <=> new file /data1/36inch/zerotest/n30052.fits
+DEBUG: S2KB_parse.pl command run time: 48 ms
+DEBUG: total nextlog run time: 3334 ms
+DEBUG: latest modification time: 14:14:57 02/15/10
+DEBUG: ls -t command run time: 113 ms
+DEBUG: old file /data1/36inch/zerotest/n30052.fits <=> new file /data1/36inch/zerotest/n30052.fits
+DEBUG: latest modification time: 14:15:06 02/15/10
+DEBUG: ls -t command run time: 86 ms
+DEBUG: old file /data1/36inch/zerotest/n30052.fits <=> new file /data1/36inch/zerotest/n30053.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3339 ms
+DEBUG: latest modification time: 14:15:15 02/15/10
+DEBUG: ls -t command run time: 110 ms
+DEBUG: old file /data1/36inch/zerotest/n30053.fits <=> new file /data1/36inch/zerotest/n30053.fits
+DEBUG: latest modification time: 14:15:24 02/15/10
+DEBUG: ls -t command run time: 97 ms
+DEBUG: old file /data1/36inch/zerotest/n30053.fits <=> new file /data1/36inch/zerotest/n30054.fits
+DEBUG: S2KB_parse.pl command run time: 53 ms
+DEBUG: total nextlog run time: 3352 ms
+DEBUG: latest modification time: 14:15:32 02/15/10
+DEBUG: ls -t command run time: 130 ms
+DEBUG: old file /data1/36inch/zerotest/n30054.fits <=> new file /data1/36inch/zerotest/n30054.fits
+DEBUG: latest modification time: 14:15:41 02/15/10
+DEBUG: ls -t command run time: 106 ms
+DEBUG: old file /data1/36inch/zerotest/n30054.fits <=> new file /data1/36inch/zerotest/n30055.fits
+DEBUG: S2KB_parse.pl command run time: 54 ms
+DEBUG: total nextlog run time: 3398 ms
+DEBUG: latest modification time: 14:15:49 02/15/10
+DEBUG: ls -t command run time: 86 ms
+DEBUG: old file /data1/36inch/zerotest/n30055.fits <=> new file /data1/36inch/zerotest/n30055.fits
+DEBUG: latest modification time: 14:15:58 02/15/10
+DEBUG: ls -t command run time: 262 ms
+DEBUG: old file /data1/36inch/zerotest/n30055.fits <=> new file /data1/36inch/zerotest/n30056.fits
+DEBUG: S2KB_parse.pl command run time: 31 ms
+DEBUG: total nextlog run time: 3741 ms
+DEBUG: latest modification time: 14:16:07 02/15/10
+DEBUG: ls -t command run time: 78 ms
+DEBUG: old file /data1/36inch/zerotest/n30056.fits <=> new file /data1/36inch/zerotest/n30056.fits
+DEBUG: latest modification time: 14:16:16 02/15/10
+DEBUG: ls -t command run time: 111 ms
+DEBUG: old file /data1/36inch/zerotest/n30056.fits <=> new file /data1/36inch/zerotest/n30057.fits
+DEBUG: S2KB_parse.pl command run time: 58 ms
+DEBUG: total nextlog run time: 3376 ms
+DEBUG: latest modification time: 14:16:19 02/15/10
+DEBUG: ls -t command run time: 102 ms
+DEBUG: old file /data1/36inch/zerotest/n30057.fits <=> new file /data1/36inch/zerotest/n30057.fits
+DEBUG: latest modification time: 14:16:24 02/15/10
+DEBUG: ls -t command run time: 80 ms
+DEBUG: old file /data1/36inch/zerotest/n30057.fits <=> new file /data1/36inch/zerotest/n30057.fits
+DEBUG: latest modification time: 14:16:33 02/15/10
+DEBUG: ls -t command run time: 80 ms
+DEBUG: old file /data1/36inch/zerotest/n30057.fits <=> new file /data1/36inch/zerotest/n30058.fits
+DEBUG: S2KB_parse.pl command run time: 55 ms
+DEBUG: total nextlog run time: 3340 ms
+DEBUG: latest modification time: 14:16:42 02/15/10
+DEBUG: ls -t command run time: 72 ms
+DEBUG: old file /data1/36inch/zerotest/n30058.fits <=> new file /data1/36inch/zerotest/n30058.fits
+DEBUG: latest modification time: 14:16:51 02/15/10
+DEBUG: ls -t command run time: 77 ms
+DEBUG: old file /data1/36inch/zerotest/n30058.fits <=> new file /data1/36inch/zerotest/n30059.fits
+DEBUG: S2KB_parse.pl command run time: 25 ms
+DEBUG: total nextlog run time: 3300 ms
+DEBUG: latest modification time: 14:16:59 02/15/10
+DEBUG: ls -t command run time: 107 ms
+DEBUG: old file /data1/36inch/zerotest/n30059.fits <=> new file /data1/36inch/zerotest/n30059.fits
+DEBUG: latest modification time: 14:17:08 02/15/10
+DEBUG: ls -t command run time: 126 ms
+DEBUG: old file /data1/36inch/zerotest/n30059.fits <=> new file /data1/36inch/zerotest/n30060.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3536 ms
+DEBUG: latest modification time: 14:17:16 02/15/10
+DEBUG: ls -t command run time: 85 ms
+DEBUG: old file /data1/36inch/zerotest/n30060.fits <=> new file /data1/36inch/zerotest/n30060.fits
+DEBUG: latest modification time: 14:17:25 02/15/10
+DEBUG: ls -t command run time: 98 ms
+DEBUG: old file /data1/36inch/zerotest/n30060.fits <=> new file /data1/36inch/zerotest/n30061.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3339 ms
+DEBUG: latest modification time: 14:17:33 02/15/10
+DEBUG: ls -t command run time: 113 ms
+DEBUG: old file /data1/36inch/zerotest/n30061.fits <=> new file /data1/36inch/zerotest/n30061.fits
+DEBUG: latest modification time: 14:17:42 02/15/10
+DEBUG: ls -t command run time: 96 ms
+DEBUG: old file /data1/36inch/zerotest/n30061.fits <=> new file /data1/36inch/zerotest/n30062.fits
+DEBUG: S2KB_parse.pl command run time: 42 ms
+DEBUG: total nextlog run time: 3534 ms
+DEBUG: latest modification time: 14:17:51 02/15/10
+DEBUG: ls -t command run time: 83 ms
+DEBUG: old file /data1/36inch/zerotest/n30062.fits <=> new file /data1/36inch/zerotest/n30062.fits
+DEBUG: latest modification time: 14:18:00 02/15/10
+DEBUG: ls -t command run time: 87 ms
+DEBUG: old file /data1/36inch/zerotest/n30062.fits <=> new file /data1/36inch/zerotest/n30063.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3382 ms
+DEBUG: latest modification time: 14:18:08 02/15/10
+DEBUG: ls -t command run time: 115 ms
+DEBUG: old file /data1/36inch/zerotest/n30063.fits <=> new file /data1/36inch/zerotest/n30063.fits
+DEBUG: latest modification time: 14:18:17 02/15/10
+DEBUG: ls -t command run time: 145 ms
+DEBUG: old file /data1/36inch/zerotest/n30063.fits <=> new file /data1/36inch/zerotest/n30064.fits
+DEBUG: S2KB_parse.pl command run time: 46 ms
+DEBUG: total nextlog run time: 3464 ms
+DEBUG: latest modification time: 14:18:26 02/15/10
+DEBUG: ls -t command run time: 86 ms
+DEBUG: old file /data1/36inch/zerotest/n30064.fits <=> new file /data1/36inch/zerotest/n30064.fits
+DEBUG: latest modification time: 14:18:35 02/15/10
+DEBUG: ls -t command run time: 113 ms
+DEBUG: old file /data1/36inch/zerotest/n30064.fits <=> new file /data1/36inch/zerotest/n30065.fits
+DEBUG: S2KB_parse.pl command run time: 64 ms
+DEBUG: total nextlog run time: 3419 ms
+DEBUG: latest modification time: 14:18:43 02/15/10
+DEBUG: ls -t command run time: 118 ms
+DEBUG: old file /data1/36inch/zerotest/n30065.fits <=> new file /data1/36inch/zerotest/n30065.fits
+DEBUG: latest modification time: 14:18:52 02/15/10
+DEBUG: ls -t command run time: 77 ms
+DEBUG: old file /data1/36inch/zerotest/n30065.fits <=> new file /data1/36inch/zerotest/n30066.fits
+DEBUG: S2KB_parse.pl command run time: 154 ms
+DEBUG: total nextlog run time: 3457 ms
+DEBUG: latest modification time: 14:19:02 02/15/10
+DEBUG: ls -t command run time: 132 ms
+DEBUG: old file /data1/36inch/zerotest/n30066.fits <=> new file /data1/36inch/zerotest/n30066.fits
+DEBUG: latest modification time: 14:19:11 02/15/10
+DEBUG: ls -t command run time: 89 ms
+DEBUG: old file /data1/36inch/zerotest/n30066.fits <=> new file /data1/36inch/zerotest/n30067.fits
+DEBUG: S2KB_parse.pl command run time: 26 ms
+DEBUG: total nextlog run time: 3576 ms
+DEBUG: latest modification time: 14:19:19 02/15/10
+DEBUG: ls -t command run time: 183 ms
+DEBUG: old file /data1/36inch/zerotest/n30067.fits <=> new file /data1/36inch/zerotest/n30067.fits
+DEBUG: latest modification time: 14:19:28 02/15/10
+DEBUG: ls -t command run time: 103 ms
+DEBUG: old file /data1/36inch/zerotest/n30067.fits <=> new file /data1/36inch/zerotest/n30068.fits
+DEBUG: S2KB_parse.pl command run time: 40 ms
+DEBUG: total nextlog run time: 3374 ms
+DEBUG: latest modification time: 14:19:32 02/15/10
+DEBUG: ls -t command run time: 159 ms
+DEBUG: old file /data1/36inch/zerotest/n30068.fits <=> new file /data1/36inch/zerotest/n30068.fits
+DEBUG: latest modification time: 14:19:37 02/15/10
+DEBUG: ls -t command run time: 114 ms
+DEBUG: old file /data1/36inch/zerotest/n30068.fits <=> new file /data1/36inch/zerotest/n30068.fits
+DEBUG: latest modification time: 14:19:46 02/15/10
+DEBUG: ls -t command run time: 403 ms
+DEBUG: old file /data1/36inch/zerotest/n30068.fits <=> new file /data1/36inch/zerotest/n30069.fits
+DEBUG: S2KB_parse.pl command run time: 82 ms
+DEBUG: total nextlog run time: 3713 ms
+DEBUG: latest modification time: 14:19:54 02/15/10
+DEBUG: ls -t command run time: 108 ms
+DEBUG: old file /data1/36inch/zerotest/n30069.fits <=> new file /data1/36inch/zerotest/n30069.fits
+DEBUG: latest modification time: 14:20:03 02/15/10
+DEBUG: ls -t command run time: 74 ms
+DEBUG: old file /data1/36inch/zerotest/n30069.fits <=> new file /data1/36inch/zerotest/n30070.fits
+DEBUG: S2KB_parse.pl command run time: 54 ms
+DEBUG: total nextlog run time: 3316 ms
+DEBUG: latest modification time: 14:20:11 02/15/10
+DEBUG: ls -t command run time: 89 ms
+DEBUG: old file /data1/36inch/zerotest/n30070.fits <=> new file /data1/36inch/zerotest/n30070.fits
+DEBUG: latest modification time: 14:20:20 02/15/10
+DEBUG: ls -t command run time: 105 ms
+DEBUG: old file /data1/36inch/zerotest/n30070.fits <=> new file /data1/36inch/zerotest/n30071.fits
+DEBUG: S2KB_parse.pl command run time: 25 ms
+DEBUG: total nextlog run time: 3388 ms
+DEBUG: latest modification time: 14:20:29 02/15/10
+DEBUG: ls -t command run time: 93 ms
+DEBUG: old file /data1/36inch/zerotest/n30071.fits <=> new file /data1/36inch/zerotest/n30071.fits
+DEBUG: latest modification time: 14:20:38 02/15/10
+DEBUG: ls -t command run time: 150 ms
+DEBUG: old file /data1/36inch/zerotest/n30071.fits <=> new file /data1/36inch/zerotest/n30072.fits
+DEBUG: S2KB_parse.pl command run time: 164 ms
+DEBUG: total nextlog run time: 3536 ms
+DEBUG: latest modification time: 14:20:46 02/15/10
+DEBUG: ls -t command run time: 88 ms
+DEBUG: old file /data1/36inch/zerotest/n30072.fits <=> new file /data1/36inch/zerotest/n30072.fits
+DEBUG: latest modification time: 14:20:55 02/15/10
+DEBUG: ls -t command run time: 89 ms
+DEBUG: old file /data1/36inch/zerotest/n30072.fits <=> new file /data1/36inch/zerotest/n30073.fits
+DEBUG: S2KB_parse.pl command run time: 40 ms
+DEBUG: total nextlog run time: 3541 ms
+DEBUG: latest modification time: 14:21:03 02/15/10
+DEBUG: ls -t command run time: 78 ms
+DEBUG: old file /data1/36inch/zerotest/n30073.fits <=> new file /data1/36inch/zerotest/n30073.fits
+DEBUG: latest modification time: 14:21:12 02/15/10
+DEBUG: ls -t command run time: 90 ms
+DEBUG: old file /data1/36inch/zerotest/n30073.fits <=> new file /data1/36inch/zerotest/n30073.fits
+DEBUG: latest modification time: 14:21:13 02/15/10
+DEBUG: ls -t command run time: 163 ms
+DEBUG: old file /data1/36inch/zerotest/n30073.fits <=> new file /data1/36inch/zerotest/n30074.fits
+DEBUG: S2KB_parse.pl command run time: 45 ms
+DEBUG: total nextlog run time: 3405 ms
+DEBUG: latest modification time: 14:21:22 02/15/10
+DEBUG: ls -t command run time: 81 ms
+DEBUG: old file /data1/36inch/zerotest/n30074.fits <=> new file /data1/36inch/zerotest/n30074.fits
+DEBUG: latest modification time: 14:21:31 02/15/10
+DEBUG: ls -t command run time: 109 ms
+DEBUG: old file /data1/36inch/zerotest/n30074.fits <=> new file /data1/36inch/zerotest/n30075.fits
+DEBUG: S2KB_parse.pl command run time: 74 ms
+DEBUG: total nextlog run time: 3410 ms
+DEBUG: latest modification time: 14:21:39 02/15/10
+DEBUG: ls -t command run time: 117 ms
+DEBUG: old file /data1/36inch/zerotest/n30075.fits <=> new file /data1/36inch/zerotest/n30075.fits
+DEBUG: latest modification time: 14:21:48 02/15/10
+DEBUG: ls -t command run time: 97 ms
+DEBUG: old file /data1/36inch/zerotest/n30075.fits <=> new file /data1/36inch/zerotest/n30076.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3391 ms
+DEBUG: latest modification time: 14:21:57 02/15/10
+DEBUG: ls -t command run time: 129 ms
+DEBUG: old file /data1/36inch/zerotest/n30076.fits <=> new file /data1/36inch/zerotest/n30076.fits
+DEBUG: latest modification time: 14:22:06 02/15/10
+DEBUG: ls -t command run time: 83 ms
+DEBUG: old file /data1/36inch/zerotest/n30076.fits <=> new file /data1/36inch/zerotest/n30077.fits
+DEBUG: S2KB_parse.pl command run time: 44 ms
+DEBUG: total nextlog run time: 3351 ms
+DEBUG: latest modification time: 14:22:14 02/15/10
+DEBUG: ls -t command run time: 193 ms
+DEBUG: old file /data1/36inch/zerotest/n30077.fits <=> new file /data1/36inch/zerotest/n30077.fits
+DEBUG: latest modification time: 14:22:23 02/15/10
+DEBUG: ls -t command run time: 117 ms
+DEBUG: old file /data1/36inch/zerotest/n30077.fits <=> new file /data1/36inch/zerotest/n30078.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3683 ms
+DEBUG: latest modification time: 14:22:32 02/15/10
+DEBUG: ls -t command run time: 129 ms
+DEBUG: old file /data1/36inch/zerotest/n30078.fits <=> new file /data1/36inch/zerotest/n30078.fits
+DEBUG: latest modification time: 14:22:41 02/15/10
+DEBUG: ls -t command run time: 95 ms
+DEBUG: old file /data1/36inch/zerotest/n30078.fits <=> new file /data1/36inch/zerotest/n30079.fits
+DEBUG: S2KB_parse.pl command run time: 32 ms
+DEBUG: total nextlog run time: 3516 ms
+DEBUG: latest modification time: 14:22:46 02/15/10
+DEBUG: ls -t command run time: 142 ms
+DEBUG: old file /data1/36inch/zerotest/n30079.fits <=> new file /data1/36inch/zerotest/n30079.fits
+DEBUG: latest modification time: 14:22:49 02/15/10
+DEBUG: ls -t command run time: 138 ms
+DEBUG: old file /data1/36inch/zerotest/n30079.fits <=> new file /data1/36inch/zerotest/n30079.fits
+DEBUG: latest modification time: 14:22:58 02/15/10
+DEBUG: ls -t command run time: 97 ms
+DEBUG: old file /data1/36inch/zerotest/n30079.fits <=> new file /data1/36inch/zerotest/n30080.fits
+DEBUG: S2KB_parse.pl command run time: 67 ms
+DEBUG: total nextlog run time: 3377 ms
+DEBUG: latest modification time: 14:23:07 02/15/10
+DEBUG: ls -t command run time: 109 ms
+DEBUG: old file /data1/36inch/zerotest/n30080.fits <=> new file /data1/36inch/zerotest/n30080.fits
+DEBUG: latest modification time: 14:23:16 02/15/10
+DEBUG: ls -t command run time: 170 ms
+DEBUG: old file /data1/36inch/zerotest/n30080.fits <=> new file /data1/36inch/zerotest/n30081.fits
+DEBUG: S2KB_parse.pl command run time: 45 ms
+DEBUG: total nextlog run time: 3433 ms
+DEBUG: latest modification time: 14:23:24 02/15/10
+DEBUG: ls -t command run time: 90 ms
+DEBUG: old file /data1/36inch/zerotest/n30081.fits <=> new file /data1/36inch/zerotest/n30081.fits
+DEBUG: latest modification time: 14:23:33 02/15/10
+DEBUG: ls -t command run time: 130 ms
+DEBUG: old file /data1/36inch/zerotest/n30081.fits <=> new file /data1/36inch/zerotest/n30082.fits
+DEBUG: S2KB_parse.pl command run time: 92 ms
+DEBUG: total nextlog run time: 3432 ms
+DEBUG: latest modification time: 14:23:42 02/15/10
+DEBUG: ls -t command run time: 103 ms
+DEBUG: old file /data1/36inch/zerotest/n30082.fits <=> new file /data1/36inch/zerotest/n30082.fits
+DEBUG: latest modification time: 14:23:51 02/15/10
+DEBUG: ls -t command run time: 116 ms
+DEBUG: old file /data1/36inch/zerotest/n30082.fits <=> new file /data1/36inch/zerotest/n30083.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3354 ms
+DEBUG: latest modification time: 14:24:00 02/15/10
+DEBUG: ls -t command run time: 110 ms
+DEBUG: old file /data1/36inch/zerotest/n30083.fits <=> new file /data1/36inch/zerotest/n30083.fits
+DEBUG: latest modification time: 14:24:09 02/15/10
+DEBUG: ls -t command run time: 105 ms
+DEBUG: old file /data1/36inch/zerotest/n30083.fits <=> new file /data1/36inch/zerotest/n30084.fits
+DEBUG: S2KB_parse.pl command run time: 49 ms
+DEBUG: total nextlog run time: 3380 ms
+DEBUG: latest modification time: 14:24:17 02/15/10
+DEBUG: ls -t command run time: 165 ms
+DEBUG: old file /data1/36inch/zerotest/n30084.fits <=> new file /data1/36inch/zerotest/n30084.fits
+DEBUG: latest modification time: 14:24:26 02/15/10
+DEBUG: ls -t command run time: 114 ms
+DEBUG: old file /data1/36inch/zerotest/n30084.fits <=> new file /data1/36inch/zerotest/n30085.fits
+DEBUG: S2KB_parse.pl command run time: 112 ms
+DEBUG: total nextlog run time: 3418 ms
+DEBUG: latest modification time: 14:24:35 02/15/10
+DEBUG: ls -t command run time: 141 ms
+DEBUG: old file /data1/36inch/zerotest/n30085.fits <=> new file /data1/36inch/zerotest/n30085.fits
+DEBUG: latest modification time: 14:24:44 02/15/10
+DEBUG: ls -t command run time: 322 ms
+DEBUG: old file /data1/36inch/zerotest/n30085.fits <=> new file /data1/36inch/zerotest/n30086.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3605 ms
+DEBUG: latest modification time: 14:24:53 02/15/10
+DEBUG: ls -t command run time: 163 ms
+DEBUG: old file /data1/36inch/zerotest/n30086.fits <=> new file /data1/36inch/zerotest/n30086.fits
+DEBUG: latest modification time: 14:25:02 02/15/10
+DEBUG: ls -t command run time: 131 ms
+DEBUG: old file /data1/36inch/zerotest/n30086.fits <=> new file /data1/36inch/zerotest/n30087.fits
+DEBUG: S2KB_parse.pl command run time: 31 ms
+DEBUG: total nextlog run time: 3448 ms
+DEBUG: latest modification time: 14:25:10 02/15/10
+DEBUG: ls -t command run time: 126 ms
+DEBUG: old file /data1/36inch/zerotest/n30087.fits <=> new file /data1/36inch/zerotest/n30087.fits
+DEBUG: latest modification time: 14:25:19 02/15/10
+DEBUG: ls -t command run time: 102 ms
+DEBUG: old file /data1/36inch/zerotest/n30087.fits <=> new file /data1/36inch/zerotest/n30088.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3374 ms
+DEBUG: latest modification time: 14:25:28 02/15/10
+DEBUG: ls -t command run time: 114 ms
+DEBUG: old file /data1/36inch/zerotest/n30088.fits <=> new file /data1/36inch/zerotest/n30088.fits
+DEBUG: latest modification time: 14:25:37 02/15/10
+DEBUG: ls -t command run time: 120 ms
+DEBUG: old file /data1/36inch/zerotest/n30088.fits <=> new file /data1/36inch/zerotest/n30089.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3586 ms
+DEBUG: latest modification time: 14:25:46 02/15/10
+DEBUG: ls -t command run time: 99 ms
+DEBUG: old file /data1/36inch/zerotest/n30089.fits <=> new file /data1/36inch/zerotest/n30089.fits
+DEBUG: latest modification time: 14:25:55 02/15/10
+DEBUG: ls -t command run time: 94 ms
+DEBUG: old file /data1/36inch/zerotest/n30089.fits <=> new file /data1/36inch/zerotest/n30090.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3351 ms
+DEBUG: latest modification time: 14:25:59 02/15/10
+DEBUG: ls -t command run time: 163 ms
+DEBUG: old file /data1/36inch/zerotest/n30090.fits <=> new file /data1/36inch/zerotest/n30090.fits
+DEBUG: latest modification time: 14:26:04 02/15/10
+DEBUG: ls -t command run time: 104 ms
+DEBUG: old file /data1/36inch/zerotest/n30090.fits <=> new file /data1/36inch/zerotest/n30090.fits
+DEBUG: latest modification time: 14:26:13 02/15/10
+DEBUG: ls -t command run time: 114 ms
+DEBUG: old file /data1/36inch/zerotest/n30090.fits <=> new file /data1/36inch/zerotest/n30091.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3376 ms
+DEBUG: latest modification time: 14:26:21 02/15/10
+DEBUG: ls -t command run time: 139 ms
+DEBUG: old file /data1/36inch/zerotest/n30091.fits <=> new file /data1/36inch/zerotest/n30091.fits
+DEBUG: latest modification time: 14:26:30 02/15/10
+DEBUG: ls -t command run time: 115 ms
+DEBUG: old file /data1/36inch/zerotest/n30091.fits <=> new file /data1/36inch/zerotest/n30092.fits
+DEBUG: S2KB_parse.pl command run time: 40 ms
+DEBUG: total nextlog run time: 3330 ms
+DEBUG: latest modification time: 14:26:39 02/15/10
+DEBUG: ls -t command run time: 119 ms
+DEBUG: old file /data1/36inch/zerotest/n30092.fits <=> new file /data1/36inch/zerotest/n30092.fits
+DEBUG: latest modification time: 14:26:48 02/15/10
+DEBUG: ls -t command run time: 205 ms
+DEBUG: old file /data1/36inch/zerotest/n30092.fits <=> new file /data1/36inch/zerotest/n30093.fits
+DEBUG: S2KB_parse.pl command run time: 49 ms
+DEBUG: total nextlog run time: 3590 ms
+DEBUG: latest modification time: 14:26:56 02/15/10
+DEBUG: ls -t command run time: 104 ms
+DEBUG: old file /data1/36inch/zerotest/n30093.fits <=> new file /data1/36inch/zerotest/n30093.fits
+DEBUG: latest modification time: 14:27:05 02/15/10
+DEBUG: ls -t command run time: 126 ms
+DEBUG: old file /data1/36inch/zerotest/n30093.fits <=> new file /data1/36inch/zerotest/n30094.fits
+DEBUG: S2KB_parse.pl command run time: 40 ms
+DEBUG: total nextlog run time: 3369 ms
+DEBUG: latest modification time: 14:27:13 02/15/10
+DEBUG: ls -t command run time: 141 ms
+DEBUG: old file /data1/36inch/zerotest/n30094.fits <=> new file /data1/36inch/zerotest/n30094.fits
+DEBUG: latest modification time: 14:27:22 02/15/10
+DEBUG: ls -t command run time: 128 ms
+DEBUG: old file /data1/36inch/zerotest/n30094.fits <=> new file /data1/36inch/zerotest/n30095.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3351 ms
+DEBUG: latest modification time: 14:27:31 02/15/10
+DEBUG: ls -t command run time: 139 ms
+DEBUG: old file /data1/36inch/zerotest/n30095.fits <=> new file /data1/36inch/zerotest/n30095.fits
+DEBUG: latest modification time: 14:27:40 02/15/10
+DEBUG: ls -t command run time: 124 ms
+DEBUG: old file /data1/36inch/zerotest/n30095.fits <=> new file /data1/36inch/zerotest/n30096.fits
+DEBUG: S2KB_parse.pl command run time: 64 ms
+DEBUG: total nextlog run time: 3413 ms
+DEBUG: latest modification time: 14:27:48 02/15/10
+DEBUG: ls -t command run time: 141 ms
+DEBUG: old file /data1/36inch/zerotest/n30096.fits <=> new file /data1/36inch/zerotest/n30096.fits
+DEBUG: latest modification time: 14:27:57 02/15/10
+DEBUG: ls -t command run time: 154 ms
+DEBUG: old file /data1/36inch/zerotest/n30096.fits <=> new file /data1/36inch/zerotest/n30097.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3660 ms
+DEBUG: latest modification time: 14:28:06 02/15/10
+DEBUG: ls -t command run time: 151 ms
+DEBUG: old file /data1/36inch/zerotest/n30097.fits <=> new file /data1/36inch/zerotest/n30097.fits
+DEBUG: latest modification time: 14:28:15 02/15/10
+DEBUG: ls -t command run time: 164 ms
+DEBUG: old file /data1/36inch/zerotest/n30097.fits <=> new file /data1/36inch/zerotest/n30098.fits
+DEBUG: S2KB_parse.pl command run time: 58 ms
+DEBUG: total nextlog run time: 3540 ms
+DEBUG: latest modification time: 14:28:24 02/15/10
+DEBUG: ls -t command run time: 107 ms
+DEBUG: old file /data1/36inch/zerotest/n30098.fits <=> new file /data1/36inch/zerotest/n30098.fits
+DEBUG: latest modification time: 14:28:33 02/15/10
+DEBUG: ls -t command run time: 150 ms
+DEBUG: old file /data1/36inch/zerotest/n30098.fits <=> new file /data1/36inch/zerotest/n30099.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3373 ms
+DEBUG: latest modification time: 14:28:41 02/15/10
+DEBUG: ls -t command run time: 154 ms
+DEBUG: old file /data1/36inch/zerotest/n30099.fits <=> new file /data1/36inch/zerotest/n30099.fits
+DEBUG: latest modification time: 14:28:50 02/15/10
+DEBUG: ls -t command run time: 153 ms
+DEBUG: old file /data1/36inch/zerotest/n30099.fits <=> new file /data1/36inch/zerotest/n30100.fits
+DEBUG: S2KB_parse.pl command run time: 70 ms
+DEBUG: total nextlog run time: 3725 ms
+DEBUG: latest modification time: 14:28:59 02/15/10
+DEBUG: ls -t command run time: 161 ms
+DEBUG: old file /data1/36inch/zerotest/n30100.fits <=> new file /data1/36inch/zerotest/n30100.fits
+DEBUG: latest modification time: 14:29:08 02/15/10
+DEBUG: ls -t command run time: 132 ms
+DEBUG: old file /data1/36inch/zerotest/n30100.fits <=> new file /data1/36inch/zerotest/n30101.fits
+DEBUG: S2KB_parse.pl command run time: 40 ms
+DEBUG: total nextlog run time: 3380 ms
+DEBUG: latest modification time: 14:29:12 02/15/10
+DEBUG: ls -t command run time: 189 ms
+DEBUG: old file /data1/36inch/zerotest/n30101.fits <=> new file /data1/36inch/zerotest/n30101.fits
+DEBUG: latest modification time: 14:29:16 02/15/10
+DEBUG: ls -t command run time: 103 ms
+DEBUG: old file /data1/36inch/zerotest/n30101.fits <=> new file /data1/36inch/zerotest/n30101.fits
+DEBUG: latest modification time: 14:29:25 02/15/10
+DEBUG: ls -t command run time: 158 ms
+DEBUG: old file /data1/36inch/zerotest/n30101.fits <=> new file /data1/36inch/zerotest/n30102.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3399 ms
+DEBUG: latest modification time: 14:29:34 02/15/10
+DEBUG: ls -t command run time: 234 ms
+DEBUG: old file /data1/36inch/zerotest/n30102.fits <=> new file /data1/36inch/zerotest/n30102.fits
+DEBUG: latest modification time: 14:29:43 02/15/10
+DEBUG: ls -t command run time: 143 ms
+DEBUG: old file /data1/36inch/zerotest/n30102.fits <=> new file /data1/36inch/zerotest/n30103.fits
+DEBUG: S2KB_parse.pl command run time: 50 ms
+DEBUG: total nextlog run time: 3388 ms
+DEBUG: latest modification time: 14:29:52 02/15/10
+DEBUG: ls -t command run time: 132 ms
+DEBUG: old file /data1/36inch/zerotest/n30103.fits <=> new file /data1/36inch/zerotest/n30103.fits
+DEBUG: latest modification time: 14:30:01 02/15/10
+DEBUG: ls -t command run time: 99 ms
+DEBUG: old file /data1/36inch/zerotest/n30103.fits <=> new file /data1/36inch/zerotest/n30104.fits
+DEBUG: S2KB_parse.pl command run time: 40 ms
+DEBUG: total nextlog run time: 3315 ms
+DEBUG: latest modification time: 14:30:09 02/15/10
+DEBUG: ls -t command run time: 141 ms
+DEBUG: old file /data1/36inch/zerotest/n30104.fits <=> new file /data1/36inch/zerotest/n30104.fits
+DEBUG: latest modification time: 14:30:18 02/15/10
+DEBUG: ls -t command run time: 102 ms
+DEBUG: old file /data1/36inch/zerotest/n30104.fits <=> new file /data1/36inch/zerotest/n30105.fits
+DEBUG: S2KB_parse.pl command run time: 113 ms
+DEBUG: total nextlog run time: 3472 ms
+DEBUG: latest modification time: 14:30:26 02/15/10
+DEBUG: ls -t command run time: 180 ms
+DEBUG: old file /data1/36inch/zerotest/n30105.fits <=> new file /data1/36inch/zerotest/n30105.fits
+DEBUG: latest modification time: 14:30:35 02/15/10
+DEBUG: ls -t command run time: 168 ms
+DEBUG: old file /data1/36inch/zerotest/n30105.fits <=> new file /data1/36inch/zerotest/n30106.fits
+DEBUG: S2KB_parse.pl command run time: 55 ms
+DEBUG: total nextlog run time: 3468 ms
+DEBUG: latest modification time: 14:30:45 02/15/10
+DEBUG: ls -t command run time: 143 ms
+DEBUG: old file /data1/36inch/zerotest/n30106.fits <=> new file /data1/36inch/zerotest/n30106.fits
+DEBUG: latest modification time: 14:30:54 02/15/10
+DEBUG: ls -t command run time: 148 ms
+DEBUG: old file /data1/36inch/zerotest/n30106.fits <=> new file /data1/36inch/zerotest/n30107.fits
+DEBUG: S2KB_parse.pl command run time: 77 ms
+DEBUG: total nextlog run time: 3471 ms
+DEBUG: latest modification time: 14:31:02 02/15/10
+DEBUG: ls -t command run time: 196 ms
+DEBUG: old file /data1/36inch/zerotest/n30107.fits <=> new file /data1/36inch/zerotest/n30107.fits
+DEBUG: latest modification time: 14:31:11 02/15/10
+DEBUG: ls -t command run time: 170 ms
+DEBUG: old file /data1/36inch/zerotest/n30107.fits <=> new file /data1/36inch/zerotest/n30108.fits
+DEBUG: S2KB_parse.pl command run time: 69 ms
+DEBUG: total nextlog run time: 3465 ms
+DEBUG: latest modification time: 14:31:19 02/15/10
+DEBUG: ls -t command run time: 132 ms
+DEBUG: old file /data1/36inch/zerotest/n30108.fits <=> new file /data1/36inch/zerotest/n30108.fits
+DEBUG: latest modification time: 14:31:28 02/15/10
+DEBUG: ls -t command run time: 120 ms
+DEBUG: old file /data1/36inch/zerotest/n30108.fits <=> new file /data1/36inch/zerotest/n30109.fits
+DEBUG: S2KB_parse.pl command run time: 54 ms
+DEBUG: total nextlog run time: 3443 ms
+DEBUG: latest modification time: 14:31:37 02/15/10
+DEBUG: ls -t command run time: 144 ms
+DEBUG: old file /data1/36inch/zerotest/n30109.fits <=> new file /data1/36inch/zerotest/n30109.fits
+DEBUG: latest modification time: 14:31:46 02/15/10
+DEBUG: ls -t command run time: 143 ms
+DEBUG: old file /data1/36inch/zerotest/n30109.fits <=> new file /data1/36inch/zerotest/n30110.fits
+DEBUG: S2KB_parse.pl command run time: 60 ms
+DEBUG: total nextlog run time: 3549 ms
+DEBUG: latest modification time: 14:31:55 02/15/10
+DEBUG: ls -t command run time: 154 ms
+DEBUG: old file /data1/36inch/zerotest/n30110.fits <=> new file /data1/36inch/zerotest/n30110.fits
+DEBUG: latest modification time: 14:32:04 02/15/10
+DEBUG: ls -t command run time: 107 ms
+DEBUG: old file /data1/36inch/zerotest/n30110.fits <=> new file /data1/36inch/zerotest/n30111.fits
+DEBUG: S2KB_parse.pl command run time: 26 ms
+DEBUG: total nextlog run time: 3516 ms
+DEBUG: latest modification time: 14:32:12 02/15/10
+DEBUG: ls -t command run time: 140 ms
+DEBUG: old file /data1/36inch/zerotest/n30111.fits <=> new file /data1/36inch/zerotest/n30111.fits
+DEBUG: latest modification time: 14:32:21 02/15/10
+DEBUG: ls -t command run time: 158 ms
+DEBUG: old file /data1/36inch/zerotest/n30111.fits <=> new file /data1/36inch/zerotest/n30112.fits
+DEBUG: S2KB_parse.pl command run time: 45 ms
+DEBUG: total nextlog run time: 3451 ms
+DEBUG: latest modification time: 14:32:26 02/15/10
+DEBUG: ls -t command run time: 269 ms
+DEBUG: old file /data1/36inch/zerotest/n30112.fits <=> new file /data1/36inch/zerotest/n30112.fits
+DEBUG: latest modification time: 14:32:29 02/15/10
+DEBUG: ls -t command run time: 159 ms
+DEBUG: old file /data1/36inch/zerotest/n30112.fits <=> new file /data1/36inch/zerotest/n30112.fits
+DEBUG: latest modification time: 14:32:38 02/15/10
+DEBUG: ls -t command run time: 151 ms
+DEBUG: old file /data1/36inch/zerotest/n30112.fits <=> new file /data1/36inch/zerotest/n30113.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3387 ms
+DEBUG: latest modification time: 14:32:47 02/15/10
+DEBUG: ls -t command run time: 142 ms
+DEBUG: old file /data1/36inch/zerotest/n30113.fits <=> new file /data1/36inch/zerotest/n30113.fits
+DEBUG: latest modification time: 14:32:56 02/15/10
+DEBUG: ls -t command run time: 137 ms
+DEBUG: old file /data1/36inch/zerotest/n30113.fits <=> new file /data1/36inch/zerotest/n30114.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3538 ms
+DEBUG: latest modification time: 14:33:06 02/15/10
+DEBUG: ls -t command run time: 135 ms
+DEBUG: old file /data1/36inch/zerotest/n30114.fits <=> new file /data1/36inch/zerotest/n30114.fits
+DEBUG: latest modification time: 14:33:15 02/15/10
+DEBUG: ls -t command run time: 204 ms
+DEBUG: old file /data1/36inch/zerotest/n30114.fits <=> new file /data1/36inch/zerotest/n30115.fits
+DEBUG: S2KB_parse.pl command run time: 26 ms
+DEBUG: total nextlog run time: 3494 ms
+DEBUG: latest modification time: 14:33:23 02/15/10
+DEBUG: ls -t command run time: 179 ms
+DEBUG: old file /data1/36inch/zerotest/n30115.fits <=> new file /data1/36inch/zerotest/n30115.fits
+DEBUG: latest modification time: 14:33:32 02/15/10
+DEBUG: ls -t command run time: 146 ms
+DEBUG: old file /data1/36inch/zerotest/n30115.fits <=> new file /data1/36inch/zerotest/n30116.fits
+DEBUG: S2KB_parse.pl command run time: 51 ms
+DEBUG: total nextlog run time: 3435 ms
+DEBUG: latest modification time: 14:33:41 02/15/10
+DEBUG: ls -t command run time: 185 ms
+DEBUG: old file /data1/36inch/zerotest/n30116.fits <=> new file /data1/36inch/zerotest/n30116.fits
+DEBUG: latest modification time: 14:33:50 02/15/10
+DEBUG: ls -t command run time: 118 ms
+DEBUG: old file /data1/36inch/zerotest/n30116.fits <=> new file /data1/36inch/zerotest/n30117.fits
+DEBUG: S2KB_parse.pl command run time: 40 ms
+DEBUG: total nextlog run time: 3415 ms
+DEBUG: latest modification time: 14:33:59 02/15/10
+DEBUG: ls -t command run time: 138 ms
+DEBUG: old file /data1/36inch/zerotest/n30117.fits <=> new file /data1/36inch/zerotest/n30117.fits
+DEBUG: latest modification time: 14:34:08 02/15/10
+DEBUG: ls -t command run time: 391 ms
+DEBUG: old file /data1/36inch/zerotest/n30117.fits <=> new file /data1/36inch/zerotest/n30118.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3680 ms
+DEBUG: latest modification time: 14:34:16 02/15/10
+DEBUG: ls -t command run time: 163 ms
+DEBUG: old file /data1/36inch/zerotest/n30118.fits <=> new file /data1/36inch/zerotest/n30118.fits
+DEBUG: latest modification time: 14:34:25 02/15/10
+DEBUG: ls -t command run time: 161 ms
+DEBUG: old file /data1/36inch/zerotest/n30118.fits <=> new file /data1/36inch/zerotest/n30119.fits
+DEBUG: S2KB_parse.pl command run time: 36 ms
+DEBUG: total nextlog run time: 3462 ms
+DEBUG: latest modification time: 14:34:33 02/15/10
+DEBUG: ls -t command run time: 141 ms
+DEBUG: old file /data1/36inch/zerotest/n30119.fits <=> new file /data1/36inch/zerotest/n30119.fits
+DEBUG: latest modification time: 14:34:42 02/15/10
+DEBUG: ls -t command run time: 135 ms
+DEBUG: old file /data1/36inch/zerotest/n30119.fits <=> new file /data1/36inch/zerotest/n30120.fits
+DEBUG: S2KB_parse.pl command run time: 49 ms
+DEBUG: total nextlog run time: 3492 ms
+DEBUG: latest modification time: 14:34:51 02/15/10
+DEBUG: ls -t command run time: 153 ms
+DEBUG: old file /data1/36inch/zerotest/n30120.fits <=> new file /data1/36inch/zerotest/n30120.fits
+DEBUG: latest modification time: 14:35:00 02/15/10
+DEBUG: ls -t command run time: 177 ms
+DEBUG: old file /data1/36inch/zerotest/n30120.fits <=> new file /data1/36inch/zerotest/n30121.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3490 ms
+DEBUG: latest modification time: 14:35:08 02/15/10
+DEBUG: ls -t command run time: 202 ms
+DEBUG: old file /data1/36inch/zerotest/n30121.fits <=> new file /data1/36inch/zerotest/n30121.fits
+DEBUG: latest modification time: 14:35:17 02/15/10
+DEBUG: ls -t command run time: 303 ms
+DEBUG: old file /data1/36inch/zerotest/n30121.fits <=> new file /data1/36inch/zerotest/n30122.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3757 ms
+DEBUG: latest modification time: 14:35:26 02/15/10
+DEBUG: ls -t command run time: 310 ms
+DEBUG: old file /data1/36inch/zerotest/n30122.fits <=> new file /data1/36inch/zerotest/n30122.fits
+DEBUG: latest modification time: 14:35:35 02/15/10
+DEBUG: ls -t command run time: 173 ms
+DEBUG: old file /data1/36inch/zerotest/n30122.fits <=> new file /data1/36inch/zerotest/n30123.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3436 ms
+DEBUG: latest modification time: 14:35:39 02/15/10
+DEBUG: ls -t command run time: 219 ms
+DEBUG: old file /data1/36inch/zerotest/n30123.fits <=> new file /data1/36inch/zerotest/n30123.fits
+DEBUG: latest modification time: 14:35:44 02/15/10
+DEBUG: ls -t command run time: 190 ms
+DEBUG: old file /data1/36inch/zerotest/n30123.fits <=> new file /data1/36inch/zerotest/n30123.fits
+DEBUG: latest modification time: 14:35:53 02/15/10
+DEBUG: ls -t command run time: 191 ms
+DEBUG: old file /data1/36inch/zerotest/n30123.fits <=> new file /data1/36inch/zerotest/n30124.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3418 ms
+DEBUG: latest modification time: 14:36:01 02/15/10
+DEBUG: ls -t command run time: 154 ms
+DEBUG: old file /data1/36inch/zerotest/n30124.fits <=> new file /data1/36inch/zerotest/n30124.fits
+DEBUG: latest modification time: 14:36:10 02/15/10
+DEBUG: ls -t command run time: 191 ms
+DEBUG: old file /data1/36inch/zerotest/n30124.fits <=> new file /data1/36inch/zerotest/n30125.fits
+DEBUG: S2KB_parse.pl command run time: 51 ms
+DEBUG: total nextlog run time: 3446 ms
+DEBUG: latest modification time: 14:36:19 02/15/10
+DEBUG: ls -t command run time: 193 ms
+DEBUG: old file /data1/36inch/zerotest/n30125.fits <=> new file /data1/36inch/zerotest/n30125.fits
+DEBUG: latest modification time: 14:36:28 02/15/10
+DEBUG: ls -t command run time: 182 ms
+DEBUG: old file /data1/36inch/zerotest/n30125.fits <=> new file /data1/36inch/zerotest/n30126.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3483 ms
+DEBUG: latest modification time: 14:36:37 02/15/10
+DEBUG: ls -t command run time: 127 ms
+DEBUG: old file /data1/36inch/zerotest/n30126.fits <=> new file /data1/36inch/zerotest/n30126.fits
+DEBUG: latest modification time: 14:36:46 02/15/10
+DEBUG: ls -t command run time: 147 ms
+DEBUG: old file /data1/36inch/zerotest/n30126.fits <=> new file /data1/36inch/zerotest/n30127.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3378 ms
+DEBUG: latest modification time: 14:36:54 02/15/10
+DEBUG: ls -t command run time: 183 ms
+DEBUG: old file /data1/36inch/zerotest/n30127.fits <=> new file /data1/36inch/zerotest/n30127.fits
+DEBUG: latest modification time: 14:37:03 02/15/10
+DEBUG: ls -t command run time: 181 ms
+DEBUG: old file /data1/36inch/zerotest/n30127.fits <=> new file /data1/36inch/zerotest/n30128.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3436 ms
+DEBUG: latest modification time: 14:37:12 02/15/10
+DEBUG: ls -t command run time: 207 ms
+DEBUG: old file /data1/36inch/zerotest/n30128.fits <=> new file /data1/36inch/zerotest/n30128.fits
+DEBUG: latest modification time: 14:37:21 02/15/10
+DEBUG: ls -t command run time: 141 ms
+DEBUG: old file /data1/36inch/zerotest/n30128.fits <=> new file /data1/36inch/zerotest/n30129.fits
+DEBUG: S2KB_parse.pl command run time: 34 ms
+DEBUG: total nextlog run time: 3465 ms
+DEBUG: latest modification time: 14:37:29 02/15/10
+DEBUG: ls -t command run time: 177 ms
+DEBUG: old file /data1/36inch/zerotest/n30129.fits <=> new file /data1/36inch/zerotest/n30129.fits
+DEBUG: latest modification time: 14:37:38 02/15/10
+DEBUG: ls -t command run time: 174 ms
+DEBUG: old file /data1/36inch/zerotest/n30129.fits <=> new file /data1/36inch/zerotest/n30130.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3559 ms
+DEBUG: latest modification time: 14:37:47 02/15/10
+DEBUG: ls -t command run time: 171 ms
+DEBUG: old file /data1/36inch/zerotest/n30130.fits <=> new file /data1/36inch/zerotest/n30130.fits
+DEBUG: latest modification time: 14:37:56 02/15/10
+DEBUG: ls -t command run time: 165 ms
+DEBUG: old file /data1/36inch/zerotest/n30130.fits <=> new file /data1/36inch/zerotest/n30131.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3640 ms
+DEBUG: latest modification time: 14:38:05 02/15/10
+DEBUG: ls -t command run time: 133 ms
+DEBUG: old file /data1/36inch/zerotest/n30131.fits <=> new file /data1/36inch/zerotest/n30131.fits
+DEBUG: latest modification time: 14:38:14 02/15/10
+DEBUG: ls -t command run time: 167 ms
+DEBUG: old file /data1/36inch/zerotest/n30131.fits <=> new file /data1/36inch/zerotest/n30132.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3424 ms
+DEBUG: latest modification time: 14:38:22 02/15/10
+DEBUG: ls -t command run time: 172 ms
+DEBUG: old file /data1/36inch/zerotest/n30132.fits <=> new file /data1/36inch/zerotest/n30132.fits
+DEBUG: latest modification time: 14:38:31 02/15/10
+DEBUG: ls -t command run time: 157 ms
+DEBUG: old file /data1/36inch/zerotest/n30132.fits <=> new file /data1/36inch/zerotest/n30133.fits
+DEBUG: S2KB_parse.pl command run time: 72 ms
+DEBUG: total nextlog run time: 3755 ms
+DEBUG: latest modification time: 14:38:40 02/15/10
+DEBUG: ls -t command run time: 136 ms
+DEBUG: old file /data1/36inch/zerotest/n30133.fits <=> new file /data1/36inch/zerotest/n30133.fits
+DEBUG: latest modification time: 14:38:49 02/15/10
+DEBUG: ls -t command run time: 814 ms
+DEBUG: old file /data1/36inch/zerotest/n30133.fits <=> new file /data1/36inch/zerotest/n30134.fits
+DEBUG: S2KB_parse.pl command run time: 41 ms
+DEBUG: total nextlog run time: 4053 ms
+DEBUG: latest modification time: 14:38:54 02/15/10
+DEBUG: ls -t command run time: 211 ms
+DEBUG: old file /data1/36inch/zerotest/n30134.fits <=> new file /data1/36inch/zerotest/n30134.fits
+DEBUG: latest modification time: 14:38:58 02/15/10
+DEBUG: ls -t command run time: 159 ms
+DEBUG: old file /data1/36inch/zerotest/n30134.fits <=> new file /data1/36inch/zerotest/n30134.fits
+DEBUG: latest modification time: 14:39:07 02/15/10
+DEBUG: ls -t command run time: 154 ms
+DEBUG: old file /data1/36inch/zerotest/n30134.fits <=> new file /data1/36inch/zerotest/n30135.fits
+DEBUG: S2KB_parse.pl command run time: 44 ms
+DEBUG: total nextlog run time: 3418 ms
+DEBUG: latest modification time: 14:39:15 02/15/10
+DEBUG: ls -t command run time: 226 ms
+DEBUG: old file /data1/36inch/zerotest/n30135.fits <=> new file /data1/36inch/zerotest/n30135.fits
+DEBUG: latest modification time: 14:39:25 02/15/10
+DEBUG: ls -t command run time: 168 ms
+DEBUG: old file /data1/36inch/zerotest/n30135.fits <=> new file /data1/36inch/zerotest/n30136.fits
+DEBUG: S2KB_parse.pl command run time: 30 ms
+DEBUG: total nextlog run time: 3437 ms
+DEBUG: latest modification time: 14:39:34 02/15/10
+DEBUG: ls -t command run time: 178 ms
+DEBUG: old file /data1/36inch/zerotest/n30136.fits <=> new file /data1/36inch/zerotest/n30136.fits
+DEBUG: latest modification time: 14:39:43 02/15/10
+DEBUG: ls -t command run time: 244 ms
+DEBUG: old file /data1/36inch/zerotest/n30136.fits <=> new file /data1/36inch/zerotest/n30137.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3548 ms
+DEBUG: latest modification time: 14:39:51 02/15/10
+DEBUG: ls -t command run time: 193 ms
+DEBUG: old file /data1/36inch/zerotest/n30137.fits <=> new file /data1/36inch/zerotest/n30137.fits
+DEBUG: latest modification time: 14:40:00 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:40:09 02/15/10
+DEBUG: ls -t command run time: 231 ms
+DEBUG: old file /data1/36inch/zerotest/n30137.fits <=> new file /data1/36inch/zerotest/n30138.fits
+DEBUG: S2KB_parse.pl command run time: 39 ms
+DEBUG: total nextlog run time: 3463 ms
+DEBUG: latest modification time: 14:40:18 02/15/10
+DEBUG: ls -t command run time: 254 ms
+DEBUG: old file /data1/36inch/zerotest/n30138.fits <=> new file /data1/36inch/zerotest/n30139.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3493 ms
+DEBUG: latest modification time: 14:40:26 02/15/10
+DEBUG: ls -t command run time: 175 ms
+DEBUG: old file /data1/36inch/zerotest/n30139.fits <=> new file /data1/36inch/zerotest/n30139.fits
+DEBUG: latest modification time: 14:40:35 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:40:44 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:40:53 02/15/10
+DEBUG: ls -t command run time: 216 ms
+DEBUG: old file /data1/36inch/zerotest/n30139.fits <=> new file /data1/36inch/zerotest/n30141.fits
+DEBUG: S2KB_parse.pl command run time: 35 ms
+DEBUG: total nextlog run time: 3478 ms
+DEBUG: latest modification time: 14:41:01 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:43:44 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:43:56 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:44:05 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:44:15 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:44:24 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:44:32 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:44:41 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:44:49 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:44:58 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:45:07 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:45:16 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:45:25 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:45:34 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:45:42 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:45:51 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:46:00 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:46:09 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:46:17 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:46:26 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:46:34 02/15/10
+ls -t returned non-zero status, skipping iteration
+DEBUG: latest modification time: 14:46:44 02/15/10
+DEBUG: ls -t command run time: 277 ms
+DEBUG: old file /data1/36inch/zerotest/n30141.fits <=> new file /data1/36inch/zerotest/n30151.fits
+DEBUG: S2KB_parse.pl command run time: 59 ms

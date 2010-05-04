@@ -1,0 +1,23 @@
+no files matched glob pattern "*.fits"
+no files matched glob pattern "*.fits"
+    while executing
+"glob -dir $path $pattern"
+    (procedure "find_newest" line 11)
+    invoked from within
+"find_newest "*.fits""
+    (procedure "nextlog" line 34)
+    invoked from within
+"nextlog "
+    (procedure "start_log" line 54)
+    invoked from within
+"start_log .logcontrol.f.1.hde .logcontrol.f.1.obse  .logcontrol.f.1.instrm "
+    invoked from within
+".logcontrol.f.3.start invoke"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 [list $w invoke]"
+    (procedure "tkButtonUp" line 7)
+    invoked from within
+"tkButtonUp .logcontrol.f.3.start
+"
+    (command bound to event)
